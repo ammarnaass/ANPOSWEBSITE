@@ -145,8 +145,8 @@ export default function Support() {
               <span className="font-label-sm text-label-sm font-semibold">مركز الدعم والمساعدة الفنية • إجابات وحلول سريعة</span>
             </div>
             <div className="hidden sm:flex items-center gap-space-sm text-on-surface-variant">
-              <Icon name="wifi_protected_setup" size={18} className="text-secondary" />
-              <span className="font-label-keycap text-label-keycap">أنظمة الدعم متصلة 24/7 • الجزائر</span>
+              <Icon name="location_on" size={18} className="text-secondary" />
+              <span className="font-label-keycap text-label-keycap">{SITE.location} • تغطية 58 ولاية</span>
             </div>
           </div>
 

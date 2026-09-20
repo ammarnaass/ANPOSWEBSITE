@@ -5,10 +5,10 @@ export default function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="fixed bottom-6 start-6 z-40">
+    <div className="fixed bottom-4 start-4 sm:bottom-6 sm:start-6 z-40">
       {/* Expanded popup */}
       {isOpen && (
-        <div className="mb-3 w-80 rounded-2xl bg-surface-container-lowest p-4 shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-surface-container animate-fade-in text-on-surface">
+        <div className="mb-3 w-[calc(100vw-2rem)] sm:w-80 max-w-sm rounded-2xl bg-surface-container-lowest p-4 shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-surface-container animate-fade-in text-on-surface">
           <div className="flex items-center justify-between pb-3 border-b border-surface-container-low">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
@@ -77,14 +77,15 @@ export default function FloatingWhatsApp() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="group flex items-center gap-space-sm bg-tertiary-container text-on-tertiary-container px-space-lg py-space-md rounded-full shadow-[0_4px_16px_rgba(0,33,20,0.2)] hover:scale-105 transition-all cursor-pointer"
+        className="group flex items-center gap-2 sm:gap-space-sm bg-tertiary-container text-on-tertiary-container px-3.5 py-2.5 sm:px-space-lg sm:py-space-md rounded-full shadow-[0_4px_16px_rgba(0,33,20,0.2)] hover:scale-105 transition-all cursor-pointer"
         aria-label="محادثة واتساب فورية"
       >
-        <span className="material-symbols-outlined text-on-tertiary-container text-[24px]">chat</span>
-        <span className="font-body-md text-body-md font-semibold text-on-tertiary-container">
-          محادثة واتساب فورية
+        <span className="material-symbols-outlined text-on-tertiary-container text-[20px] sm:text-[24px]">chat</span>
+        <span className="font-body-md text-xs sm:text-body-md font-bold sm:font-semibold text-on-tertiary-container">
+          <span className="sm:hidden">واتساب</span>
+          <span className="hidden sm:inline">محادثة واتساب فورية</span>
         </span>
-        <span className="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-pulse" />
+        <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-tertiary-fixed animate-pulse" />
       </button>
     </div>
   )

@@ -25,31 +25,31 @@ export default function Home() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-display-total text-display-total tracking-tight text-on-surface mb-space-md">
+            <h1 className="font-display-total text-[26px] sm:text-4xl lg:text-display-total text-on-surface mb-space-md leading-[1.25] sm:leading-[1.2]">
               نظّم مبيعات متجرك ومخزونك <br className="hidden sm:inline" />
               <span className="text-secondary inline-block">من جهاز واحد أو عدة أجهزة</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-lg leading-relaxed">
+            <p className="font-body-lg text-sm sm:text-body-lg text-on-surface-variant max-w-xl mb-space-lg leading-relaxed">
               نظام كاشير ونقاط بيع متكامل لسطح المكتب والهاتف. صُمم خصيصاً للمحلات والمتاجر الجزائرية لسرعة البيع الفائقة، إدارة المخزون اللحظية، ودعم الطابعات الحرارية والمعايير الجبائية المحلية.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-space-md w-full sm:w-auto mb-space-lg">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm w-full sm:w-auto mb-space-lg">
               <Link
                 to="/downloads"
-                className="w-full sm:w-auto flex items-center justify-center gap-space-sm px-space-xl py-space-md bg-secondary hover:bg-secondary-container text-on-secondary rounded-xl font-headline-md text-title-lg transition-all shadow-md active:translate-y-0.5 group"
+                className="w-full sm:w-auto flex items-center justify-center gap-space-sm px-5 sm:px-space-xl py-3 sm:py-space-md bg-secondary hover:bg-secondary-container text-on-secondary rounded-xl font-headline-md text-base sm:text-title-lg transition-all shadow-md active:translate-y-0.5 group"
               >
-                <span className="material-symbols-outlined text-[24px]">download</span>
+                <span className="material-symbols-outlined text-[22px] sm:text-[24px]">download</span>
                 <span>حمّل التطبيق – جرّبه 7 أيام مجاناً</span>
-                <span className="font-label-keycap text-label-keycap bg-on-secondary/20 px-space-xs py-0.5 rounded">
+                <span className="font-label-keycap text-label-keycap bg-on-secondary/20 px-space-xs py-0.5 rounded hidden sm:inline-block">
                   F12
                 </span>
               </Link>
               <a
                 href="#features"
-                className="w-full sm:w-auto flex items-center justify-center gap-space-xs px-space-lg py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded-xl font-body-lg text-body-lg transition-colors"
+                className="w-full sm:w-auto flex items-center justify-center gap-space-xs px-space-lg py-3 sm:py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded-xl font-body-lg text-sm sm:text-body-lg transition-colors"
               >
                 <span className="material-symbols-outlined text-[20px] text-secondary">visibility</span>
                 <span>شاهد المميزات الكاملة</span>
@@ -57,18 +57,18 @@ export default function Home() {
             </div>
 
             {/* Quick Spec Stats */}
-            <div className="grid grid-cols-3 gap-space-md w-full max-w-lg pt-space-md">
-              <div className="p-space-sm rounded-lg bg-surface-container-low">
-                <div className="font-headline-md text-headline-md text-on-surface font-bold">0.1 ثانية</div>
-                <div className="font-label-sm text-label-sm text-on-surface-variant">زمن قراءة وطباعة الباركود</div>
+            <div className="grid grid-cols-3 gap-2 sm:gap-space-md w-full max-w-lg pt-space-xs sm:pt-space-md">
+              <div className="p-2 sm:p-space-sm rounded-lg bg-surface-container-low text-center sm:text-start">
+                <div className="font-bold text-sm sm:text-headline-md text-on-surface">0.1 ثانية</div>
+                <div className="text-[10px] sm:text-label-sm text-on-surface-variant leading-tight mt-0.5">زمن قراءة وطباعة الباركود</div>
               </div>
-              <div className="p-space-sm rounded-lg bg-surface-container-low">
-                <div className="font-headline-md text-headline-md text-secondary font-bold">100% أوفلاين</div>
-                <div className="font-label-sm text-label-sm text-on-surface-variant">عمل متواصل بلا انقطاع</div>
+              <div className="p-2 sm:p-space-sm rounded-lg bg-surface-container-low text-center sm:text-start">
+                <div className="font-bold text-sm sm:text-headline-md text-secondary">100% أوفلاين</div>
+                <div className="text-[10px] sm:text-label-sm text-on-surface-variant leading-tight mt-0.5">عمل متواصل بلا انقطاع</div>
               </div>
-              <div className="p-space-sm rounded-lg bg-surface-container-low">
-                <div className="font-headline-md text-headline-md text-on-tertiary-container font-bold">58 ولاية</div>
-                <div className="font-label-sm text-label-sm text-on-surface-variant">تغطية ودعم فني معتمد</div>
+              <div className="p-2 sm:p-space-sm rounded-lg bg-surface-container-low text-center sm:text-start">
+                <div className="font-bold text-sm sm:text-headline-md text-on-tertiary-container">58 ولاية</div>
+                <div className="text-[10px] sm:text-label-sm text-on-surface-variant leading-tight mt-0.5">تغطية ودعم فني معتمد</div>
               </div>
             </div>
           </div>

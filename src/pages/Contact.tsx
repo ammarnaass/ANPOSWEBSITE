@@ -375,11 +375,11 @@ export default function Contact() {
                   </div>
                   <span className="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-keycap text-label-keycap">مكاتب وموزعون</span>
                 </div>
-                <h3 className="font-title-lg text-title-lg text-on-surface font-bold">المقر وشبكة الولايات</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant">الجزائر العاصمة (المقر التقني الرئيسي) مع فروع وموزعين معتمدين في وهران، سطيف، قسنطينة وعنابة.</p>
+                <h3 className="font-title-lg text-title-lg text-on-surface font-bold">المقر وشبكة التوزيع</h3>
+                <p className="font-body-md text-body-md text-on-surface-variant">وادي سوف (المقر الرئيسي للدعم والتوزيع) مع شبكة توزيع وتغطية تقنية وميدانية شاملة لـ 58 ولاية.</p>
                 <div className="flex flex-col gap-1 mt-2">
-                  <span className="font-body-md text-body-md font-bold text-on-surface">باب الزوار، الجزائر العاصمة</span>
-                  <span className="font-label-sm text-label-sm text-on-surface-variant">إمكانية التنقل الميداني للمحلات</span>
+                  <span className="font-body-md text-body-md font-bold text-on-surface">{SITE.location}</span>
+                  <span className="font-label-sm text-label-sm text-on-surface-variant">شحن وربط فوري وتدخل ميداني للمتاجر</span>
                 </div>
               </div>
               <a
@@ -590,9 +590,9 @@ export default function Contact() {
                 <div className="p-space-md flex items-center justify-between bg-surface-container-lowest">
                   <div className="flex items-center gap-space-xs">
                     <Icon name="pin_drop" size={20} className="text-secondary" />
-                    <span className="font-body-md text-body-md font-bold text-on-surface">مركز الدعم والتوزيع الرئيسي - باب الزوار</span>
+                    <span className="font-body-md text-body-md font-bold text-on-surface">{SITE.location}</span>
                   </div>
-                  <span className="font-label-keycap text-label-keycap text-on-surface-variant">الجزائر</span>
+                  <span className="font-label-keycap text-label-keycap text-on-surface-variant">وادي سوف • الجزائر</span>
                 </div>
               </div>
 

@@ -46,11 +46,17 @@ export const DOWNLOAD_PORTABLE_URL = 'https://download1347.mediafire.com/cae04ji
 export const DOWNLOAD_ANDROID_APK_URL = 'https://download.mediafire.com/anpos/AN-POS-Mobile.apk'
 export const DOWNLOAD_GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.anpos.mobile'
 
+// المقر الرئيسي وشبكة التوزيع
+export const MAIN_DISTRIBUTION_CENTER = 'مركز الدعم والتوزيع الرئيسي - وادي سوف'
+export const REGION_COVERAGE = 'وادي سوف (المقر الرئيسي) • شبكة توزيع وتغطية شاملة لـ 58 ولاية'
+
 export const SITE = {
   name: 'AN POS',
   tagline: 'نقاط البيع السريعة',
   logo: '/logo.png',
   version: SOFTWARE_VERSION,
+  location: MAIN_DISTRIBUTION_CENTER,
+  regionCoverage: REGION_COVERAGE,
   phone1: '0555 22 06 20',
   phone2: '0674 78 48 59',
   tel1: 'tel:+213555220620',

@@ -23,14 +23,14 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-      <div className="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md">
+      <div className="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-space-md">
         {/* Brand */}
-        <div className="flex items-center gap-space-md">
+        <div className="flex items-center gap-2 sm:gap-space-md">
           <Link to="/" className="flex items-center gap-space-sm" aria-label="AN POS — الرئيسية">
-            <img src="/logo.png" alt="شعار AN POS" className="w-10 h-10 rounded-xl object-contain shadow-sm" />
+            <img src="/logo.png" alt="شعار AN POS" className="w-10 h-10 rounded-xl object-contain shadow-sm shrink-0" />
             <span className="font-headline-md text-headline-md tracking-tight text-on-surface">AN POS</span>
           </Link>
-          <span className="font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-on-primary-fixed-variant">
+          <span className="hidden sm:inline-flex font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-on-primary-fixed-variant">
             النسخة {SITE.version}
           </span>
         </div>
@@ -56,13 +56,14 @@ export default function Header() {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-space-md">
+        <div className="flex items-center gap-2 sm:gap-space-md">
           <Link
             to="/downloads"
-            className="font-body-md text-body-md px-space-lg py-space-sm rounded-xl bg-secondary text-on-secondary hover:bg-secondary-container transition-all flex items-center gap-space-xs shadow-[0_2px_4px_rgba(14,26,47,0.08)]"
+            className="font-body-md text-body-md px-3 py-2 sm:px-space-lg sm:py-space-sm rounded-xl bg-secondary text-on-secondary hover:bg-secondary-container transition-all flex items-center gap-1.5 sm:gap-space-xs shadow-[0_2px_4px_rgba(14,26,47,0.08)] whitespace-nowrap shrink-0"
           >
-            <span>تحميل مجاني (تجربة 7 أيام)</span>
-            <span className="font-label-keycap text-label-keycap bg-surface-container-lowest/20 px-space-xs py-0.5 rounded">
+            <span className="hidden sm:inline">تحميل مجاني (تجربة 7 أيام)</span>
+            <span className="sm:hidden text-xs font-bold">تحميل مجاني</span>
+            <span className="hidden sm:inline-block font-label-keycap text-label-keycap bg-surface-container-lowest/20 px-space-xs py-0.5 rounded">
               F12
             </span>
           </Link>

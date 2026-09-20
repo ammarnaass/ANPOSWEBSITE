@@ -163,6 +163,12 @@ export default function Footer() {
                 <span className="material-symbols-outlined text-[20px]">schedule</span>
                 <span className="font-label-sm text-label-sm">{SITE.hours}</span>
               </div>
+
+              {/* Location & Distribution Hub */}
+              <div className="flex items-start gap-2 pt-1 text-on-surface">
+                <span className="material-symbols-outlined text-[20px] text-secondary shrink-0 mt-0.5">location_on</span>
+                <span className="font-label-sm text-label-sm font-semibold text-on-surface">{SITE.location}</span>
+              </div>
             </div>
           </div>
         </div>
