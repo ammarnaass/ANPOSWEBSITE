@@ -26,11 +26,11 @@ export const SOFTWARE_VERSION = 'v2.4' // الإصدار العام المعرو
 
 // نسخة سطح المكتب (Desktop POS - Windows)
 export const DESKTOP_VERSION = 'v2.4.2'
-export const DESKTOP_FILE_SIZE = '85 MB'
+export const DESKTOP_FILE_SIZE = '146.41MB'
 export const DESKTOP_OS = 'Windows 10/11'
 export const DESKTOP_OS_FULL = 'Windows 11 / 10 / 8.1 (64-bit)'
-export const DESKTOP_SETUP_FILENAME = 'AN POS Setup 0.0.0.exe'
-export const DESKTOP_PORTABLE_FILENAME = 'AN POS 0.0.0.exe'
+export const DESKTOP_SETUP_FILENAME = 'AN POS Setup 2.4.0.exe'
+export const DESKTOP_PORTABLE_FILENAME = 'AN POS 2.4.0.exe'
 
 // تطبيق الهاتف المحمول (Mobile POS - Android)
 export const MOBILE_VERSION = 'v2.4.0'

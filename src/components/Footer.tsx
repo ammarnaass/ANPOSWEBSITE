@@ -86,6 +86,12 @@ export default function Footer() {
                   طلب عرض تجريبي واستشارة
                 </Link>
               </li>
+              <li className="pt-1">
+                <Link className="font-body-md text-body-md text-secondary font-bold hover:underline flex items-center gap-1.5" to="/app">
+                  <span>📦 معلومات وإصدارات البرنامج (/app)</span>
+                  <span className="font-mono text-[10px] bg-secondary/15 px-1.5 py-0.2 rounded">v2.4</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -30,9 +30,14 @@ export default function Header() {
             <img src="/logo.png" alt="شعار AN POS" className="w-10 h-10 rounded-xl object-contain shadow-sm shrink-0" />
             <span className="font-headline-md text-headline-md tracking-tight text-on-surface">AN POS</span>
           </Link>
-          <span className="hidden sm:inline-flex font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-on-primary-fixed-variant">
-            النسخة {SITE.version}
-          </span>
+          <Link
+            to="/app"
+            title="معلومات وإصدارات البرنامج (/app)"
+            className="hidden sm:inline-flex items-center gap-1 font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-primary-fixed-variant hover:text-secondary transition-colors"
+          >
+            <span>النسخة {SITE.version}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block" />
+          </Link>
         </div>
 
         {/* Desktop Nav */}
@@ -114,6 +119,20 @@ export default function Header() {
                 {l.label}
               </NavLink>
             ))}
+            <NavLink
+              to="/app"
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `rounded-lg px-4 py-2.5 text-base font-medium transition-colors flex items-center justify-between border-t border-outline-variant/30 mt-1 pt-3 ${
+                  isActive
+                    ? 'bg-surface-container text-secondary font-bold'
+                    : 'text-secondary hover:bg-surface-container-low'
+                }`
+              }
+            >
+              <span>📦 معلومات وإصدارات البرنامج</span>
+              <span className="font-mono text-xs bg-secondary/15 px-2 py-0.5 rounded">/app</span>
+            </NavLink>
           </div>
         </nav>
       )}

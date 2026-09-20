@@ -7,6 +7,7 @@ import Pricing from './pages/Pricing'
 import Client from './pages/Client'
 import Support from './pages/Support'
 import Contact from './pages/Contact'
+import AppInfo from './pages/AppInfo'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/client" element={<Client />} />
           <Route path="/support" element={<Support />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/app" element={<AppInfo />} />
         </Route>
       </Routes>
     </BrowserRouter>
