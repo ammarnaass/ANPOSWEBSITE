@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed-variant":"#005137","background":"#f8f9ff","surface":"#f8f9ff","tertiary":"#000000","on-background":"#0b1c30","on-error":"#ffffff","on-error-container":"#93000a","error-container":"#ffdad6","on-surface-variant":"#45474d","surface-container-lowest":"#ffffff","primary-fixed":"#d7e2ff","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","on-primary":"#ffffff","outline-variant":"#c5c6cd","surface-tint":"#535e77","primary-container":"#101b30","on-secondary-fixed":"#00174b","inverse-surface":"#213145","primary":"#000000","tertiary-fixed":"#85f8c4","primary-fixed-dim":"#bbc6e3","surface-bright":"#f8f9ff","tertiary-fixed-dim":"#68dba9","on-secondary":"#ffffff","on-secondary-container":"#fefcff","on-primary-fixed-variant":"#3b475e","on-tertiary-fixed":"#002114","outline":"#75777d","on-primary-fixed":"#101b30","on-tertiary-container":"#069669","secondary-fixed":"#dbe1ff","on-surface":"#0b1c30","surface-container-highest":"#d3e4fe","inverse-primary":"#bbc6e3","secondary":"#0051d5","inverse-on-surface":"#eaf1ff","tertiary-container":"#002114","surface-container":"#e5eeff","error":"#ba1a1a","on-secondary-fixed-variant":"#003ea8","surface-container-high":"#dce9ff","on-primary-container":"#78849e","surface-dim":"#cbdbf5","secondary-container":"#316bf3","secondary-fixed-dim":"#b4c5ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"1rem","space-xl":"1.75rem","gutter":"0.75rem","space-xs":"0.25rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1.25rem"},"fontFamily":{"label-keycap":["IBM Plex Sans"],"display-total":["IBM Plex Sans"],"body-md":["IBM Plex Sans"],"headline-md":["IBM Plex Sans"],"label-sm":["IBM Plex Sans"],"title-lg":["IBM Plex Sans"],"body-lg":["IBM Plex Sans"],"headline-lg":["IBM Plex Sans"]},"fontSize":{"label-keycap":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"display-total":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased relative selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="font-headline-md text-headline-md leading-none">AN</span></div><div class="flex flex-col"><span class="font-title-lg text-title-lg text-on-surface leading-tight">نظام AN POS</span><span class="font-label-sm text-label-sm text-on-surface-variant">نقاط البيع السريعة</span></div><span class="px-space-xs py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-keycap text-label-keycap tracking-normal">v2.4</span></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low/60" data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-xl"><a class="px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="home" href="#">الرئيسية</a><a class="px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="features" href="#">المميزات</a><a class="px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="downloads" href="#">التحميل</a><a class="px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="pricing" href="#">التسعير والتفعيل</a><a aria-current="page" class="px-space-md py-space-xs transition-all bg-surface-container-high text-on-surface font-bold rounded-xl" data-path="support" href="#">الدعم والأسئلة</a><a class="px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="contact" href="#">تواصل معنا</a></nav></div><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-sm px-space-lg py-2.5 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-primary-container hover:text-on-primary transition-all active:translate-y-0.5" data-path="downloads" href="#"><span>تحميل مجاني (تجربة 7 أيام)</span><span class="px-1.5 py-0.5 rounded-lg bg-surface-container-highest text-on-primary-fixed font-label-keycap text-label-keycap">F12</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-96 bg-gradient-to-b from-primary-fixed/40 via-surface-variant/30 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-16">
+<!-- Top Breadcrumb & Status Badge -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-8">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container -mr-3"></span>
+<span class="font-label-sm text-label-sm font-semibold">مركز الدعم والمساعدة الفنية • إجابات وحلول سريعة</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">wifi_protected_setup</span>
+<span class="font-label-keycap text-label-keycap">أنظمة الدعم متصلة 24/7 • الجزائر</span>
+</div>
+</div>
+<!-- Main Header Section -->
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+<h1 class="font-headline-lg text-headline-lg sm:text-[38px] sm:leading-[46px] text-on-surface tracking-tight">
+          كيف يمكننا مساعدتك اليوم؟
+        </h1>
+<p class="mt-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          تصفح أدلة الاستخدام المصورة، حلول المشاكل الشائعة، أو تواصل فوراً مع فريق الدعم الفني لمساعدتك عن بعد في ربط أجهزتك وضبط نقطة البيع.
+        </p>
+<!-- Big Search Interface -->
+<div class="w-full mt-8">
+<div class="relative flex items-center bg-surface-container-lowest rounded-full p-2 shadow-[0_4px_24px_rgba(11,28,48,0.08)] transition-all focus-within:shadow-[0_8px_30px_rgba(0,81,213,0.14)]">
+<span class="material-symbols-outlined text-[24px] text-on-surface-variant mr-3 ms-2">search</span>
+<input class="w-full bg-transparent px-3 py-3 font-body-lg text-body-lg text-on-surface placeholder:text-outline outline-none" id="faqSearchInput" onkeyup="filterContent(this.value)" placeholder="ابحث عن سؤال، كود تفعيل، إعداد طابعة، أو حل مشكلة..." type="text"/>
+<button class="hidden sm:inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary text-on-primary font-body-md text-body-md hover:bg-primary-container transition-all">
+<span>بحث</span>
+<span class="font-label-keycap text-label-keycap opacity-75">↵</span>
+</button>
+</div>
+<!-- Quick Tag Pills -->
+<div class="flex flex-wrap items-center justify-center gap-2 mt-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1">الأكثر بحثاً:</span>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="setSearch('ربط الطابعة الحرارية')">
+              ربط الطابعة الحرارية
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="setSearch('تفعيل بعد 7 أيام')">
+              تفعيل بعد 7 أيام
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="setSearch('بريدي موب BaridiMob')">
+              بريدي موب BaridiMob
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="setSearch('AnyDesk عن بعد')">
+              AnyDesk عن بعد
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" onclick="setSearch('نقل الترخيص')">
+              نقل الترخيص
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Support Channels Quick Cards -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 w-full mb-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: AnyDesk -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-full sm:rounded-xl p-6 lg:p-8 shadow-[0_2px_12px_rgba(11,28,48,0.04)] hover:shadow-[0_8px_24px_rgba(11,28,48,0.08)] transition-all group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-error-container/60 text-error flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[30px]">desktop_windows</span>
+</div>
+<div class="flex items-center gap-space-xs mb-2">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-keycap text-label-keycap">تدخل تقني</span>
+<span class="font-label-keycap text-label-keycap text-secondary font-bold">مجاني للمشتركين</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">الدعم المباشر عن بعد (AnyDesk / TeamViewer)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+            فريقنا التقني جاهز للتحكم بجهاز الكاشير الخاص بك عن بعد لحل مشاكل تعريف الطابعات الحرارية، إعداد قارئ الباركود، وضبط الخيارات التقنية فوراً.
+          </p>
+</div>
+<div>
+<a class="w-full inline-flex items-center justify-center gap-space-sm px-5 py-3.5 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-primary-container transition-all active:translate-y-0.5" href="#quick-ticket">
+<span class="material-symbols-outlined text-[20px]">screen_share</span>
+<span>طلب جلسة AnyDesk الآن</span>
+</a>
+<span class="block text-center font-label-sm text-label-sm text-on-surface-variant mt-2">زمن الانتظار الوسطي: أقل من 10 دقائق</span>
+</div>
+</div>
+<!-- Card 2: WhatsApp -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-full sm:rounded-xl p-6 lg:p-8 shadow-[0_2px_12px_rgba(11,28,48,0.04)] hover:shadow-[0_8px_24px_rgba(11,28,48,0.08)] transition-all group relative overflow-hidden">
+<div class="absolute top-0 end-0 px-4 py-1.5 rounded-bl-xl bg-tertiary-fixed text-on-tertiary-fixed font-label-keycap text-label-keycap font-bold">
+          الأسرع استجابة
+        </div>
+<div>
+<div class="w-14 h-14 rounded-xl bg-tertiary-fixed/30 text-on-tertiary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div class="flex items-center gap-space-xs mb-2">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-keycap text-label-keycap">خدمة الزبائن</span>
+<span class="font-label-keycap text-label-keycap text-on-tertiary-container font-bold">متصل الآن</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">المحادثة الفورية عبر واتساب</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+            الرد خلال دقائق لتأكيد وصول الدفع، إرسال مفتاح الترخيص الدائم، وإرشادك خطوة بخطوة بالصور والفيديوهات التوضيحية طيلة أيام الأسبوع.
+          </p>
+</div>
+<div>
+<a class="w-full inline-flex items-center justify-center gap-space-sm px-5 py-3.5 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-primary-container transition-all active:translate-y-0.5" href="https://wa.me/213000000000?text=مرحباً،%20أحتاج%20مساعدة%20في%20برنامج%20AN%20POS" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>فتح محادثة واتساب (دعم 24/7)</span>
+</a>
+<span class="block text-center font-label-sm text-label-sm text-on-surface-variant mt-2">رقم الحسابات والتفعيل: 0660-00-00-00</span>
+</div>
+</div>
+<!-- Card 3: Phone & Field Representatives -->
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-full sm:rounded-xl p-6 lg:p-8 shadow-[0_2px_12px_rgba(11,28,48,0.04)] hover:shadow-[0_8px_24px_rgba(11,28,48,0.08)] transition-all group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[30px]">support_agent</span>
+</div>
+<div class="flex items-center gap-space-xs mb-2">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-keycap text-label-keycap">شبكة وطنية</span>
+<span class="font-label-keycap text-label-keycap text-secondary font-bold">58 ولاية</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">الاتصال الهاتفي والمرافقة الميدانية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+            شبكة من الموزعين والتقنيين المعتمدين لتجهيز المتاجر الكبرى، تثبيت الكاشير، تنظيم الفواتير، وتقديم عروض الأسعار الرسمية للفواتير الشكلية (Proforma).
+          </p>
+</div>
+<div>
+<a class="w-full inline-flex items-center justify-center gap-space-sm px-5 py-3.5 rounded-xl bg-surface-container-high text-on-surface font-body-lg text-body-lg hover:bg-surface-container-highest transition-all active:translate-y-0.5" href="tel:0550000000">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>الاتصال بالرقم المباشر</span>
+</a>
+<span class="block text-center font-label-sm text-label-sm text-on-surface-variant mt-2">السبت - الخميس: 08:00 صباحاً إلى 18:00 مساءً</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Guided Troubleshooting & Setup Guides (Visual Bento) -->
+<div class="w-full bg-surface-container-low/70 py-16">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface mb-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">menu_book</span>
+<span class="font-label-sm text-label-sm font-semibold">أدلة تقنية سريعة</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">أدلة التثبيت والإعداد الذاتي</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">اتبع هذه الخطوات البسيطة لربط عتادك وضبط إعدادات المتجر دون انتظار المساعدة التقنية.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">محدثة للإصدار:</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-highest text-on-surface font-label-keycap text-label-keycap">AN POS v2.4</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Guide 1: Printers -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_1px_3px_rgba(15,23,42,0.05)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">print</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">دليل ربط وتثبيت الطابعات الحرارية (80mm / 58mm)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Xprinter, Rongta, Epson, Zebra وغيرها</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface font-label-keycap text-label-keycap">4 خطوات</span>
+</div>
+<ol class="space-y-3 mt-4 text-on-surface">
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">1</span>
+<span>توصيل كابل USB وتشغيل الطابعة وتثبيت التعريف (Driver) الخاص بها من موقع الشركة المصنعة.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">2</span>
+<span>الدخول لبرنامج AN POS ثم قائمة <strong>الإعدادات</strong> &gt; <strong>الطابعات ومنافذ البيع</strong>.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">3</span>
+<span>اختيار اسم الطابعة وتحديد مقاس الورق (80mm لوصل المحلات أو 58mm الصغير)، وتفعيل فتح درج النقود (Cash Drawer RJ11).</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">4</span>
+<span>الضغط على زر <strong>طباعة وصل تجريبي</strong> للتأكد من القص التلقائي وسرعة الطبع.</span>
+</li>
+</ol>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between bg-surface-container-low p-3 rounded-xl">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm">يدعم بروتوكول ESC/POS القياسي المباشر</span>
+</div>
+<a class="font-body-md text-body-md text-secondary hover:underline font-semibold" href="https://wa.me/213000000000?text=أحتاج%20مساعدة%20في%20تعريف%20الطابعة" target="_blank">طلب ملف Driver</a>
+</div>
+</div>
+<!-- Guide 2: 7-day Activation -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_1px_3px_rgba(15,23,42,0.05)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">key</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">دليل تفعيل النسخة الدائمة بعد الـ 7 أيام</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">الاحتفاظ بجميع بياناتك بدون مسح أو انقطاع</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface font-label-keycap text-label-keycap">فوري</span>
+</div>
+<ol class="space-y-3 mt-4 text-on-surface">
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">1</span>
+<span>فتح شاشة <strong>حول البرنامج / التفعيل</strong> ونسخ <strong>معرّف الجهاز الفريد (Machine ID)</strong>.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">2</span>
+<span>تسديد المستحقات (15,000 دج لمرة واحدة) عبر BaridiMob أو حساب CCP أو الدفع نقداً.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">3</span>
+<span>إرسال لقطة الشاشة أو صورة الوصل مع معرّف الجهاز إلى رقم واتساب الرسمي الخاص بنا.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">4</span>
+<span>لصق كود الترخيص والضغط على <strong>تفعيل دائم مدى الحياة</strong> لتستمر مباشرة.</span>
+</li>
+</ol>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between bg-surface-container-low p-3 rounded-xl">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span class="font-label-sm text-label-sm">البيانات والمعاملات السابقة لا تحذف أبداً</span>
+</div>
+<span class="font-label-keycap text-label-keycap text-on-tertiary-container font-bold">تفعيل خلال 5 دقائق</span>
+</div>
+</div>
+<!-- Guide 3: Excel Import -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_1px_3px_rgba(15,23,42,0.05)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">table_view</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">دليل استيراد السلع وقوائم الأسعار من ملف Excel</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">إدخال آلاف الأصناف والباركود في ثوانٍ</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface font-label-keycap text-label-keycap">أتمتة</span>
+</div>
+<ol class="space-y-3 mt-4 text-on-surface">
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">1</span>
+<span>تحميل النموذج المعتمد بصيغة (.xlsx أو .csv) من قائمة <strong>المخزون</strong> &gt; <strong>استيراد منتجات</strong>.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">2</span>
+<span>ملء أعمدة: اسم المنتج، الباركود الدولي أو الداخلي، سعر الشراء، وسعر البيع (بالتجزئة والجملة).</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">3</span>
+<span>رفع الملف ومراجعة مطابقة الحقول ثم الضغط على <strong>بدء المعالجة السريعة</strong>.</span>
+</li>
+</ol>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between bg-surface-container-low p-3 rounded-xl">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm">معالجة حتى 25,000 منتج في أقل من 15 ثانية</span>
+</div>
+<button class="font-body-md text-body-md text-secondary hover:underline font-semibold" onclick="alert('تم تجهيز قالب الإكسل التجريبي للتحميل')">تحميل النموذج</button>
+</div>
+</div>
+<!-- Guide 4: Backup & Migration -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_1px_3px_rgba(15,23,42,0.05)] flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">sync_saved_locally</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">دليل النسخ الاحتياطي ونقل البيانات لجهاز جديد</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">حماية رأس مالك التجاري من تلف الأقراص الصلبة</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface font-label-keycap text-label-keycap">أمان 100%</span>
+</div>
+<ol class="space-y-3 mt-4 text-on-surface">
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">1</span>
+<span>من شاشة الإغلاق اليومي أو قائمة الأمان، اضغط على <strong>أخذ نسخة احتياطية فورية (.bak)</strong>.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">2</span>
+<span>اختر مسار الحفظ على قرص فلاش خارجي (USB Flash Disk) أو خدمة سحابية مفضلة.</span>
+</li>
+<li class="flex items-start gap-3 text-body-md font-body-md">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-keycap text-label-keycap shrink-0 mt-0.5">3</span>
+<span>عند الانتقال لكمبيوتر جديد: ثبّت AN POS ثم اختر <strong>استعادة نسخة احتياطية سابقة</strong>.</span>
+</li>
+</ol>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between bg-surface-container-low p-3 rounded-xl">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm">النسخ مشفر ومحمي بكلمة سر المدير</span>
+</div>
+<span class="font-label-keycap text-label-keycap text-on-surface-variant">نسخ تلقائي مجدول يومياً</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed FAQ Section -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 w-full py-16">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container text-on-surface mb-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">help</span>
+<span class="font-label-sm text-label-sm font-semibold">قاعدة المعرفة</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">الأسئلة الشائعة والأكثر تكراراً</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">كل ما تحتاج معرفته عن التراخيص، الأجهزة المدعومة، طرق الدفع والخدمات بعد الشراء.</p>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center justify-center gap-2 mb-8 overflow-x-auto pb-2">
+<button class="faq-tab px-4 py-2 rounded-xl bg-primary text-on-primary font-body-md text-body-md font-semibold transition-all" onclick="switchFaqCategory('all', this)">
+        جميع الأسئلة
+      </button>
+<button class="faq-tab px-4 py-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-body-md text-body-md transition-all" onclick="switchFaqCategory('pricing', this)">
+        التسعير والتفعيل و BaridiMob
+      </button>
+<button class="faq-tab px-4 py-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-body-md text-body-md transition-all" onclick="switchFaqCategory('hardware', this)">
+        الأجهزة والعتاد والإنترنت
+      </button>
+<button class="faq-tab px-4 py-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-body-md text-body-md transition-all" onclick="switchFaqCategory('data', this)">
+        البيانات والنسخ والضمان
+      </button>
+</div>
+<!-- FAQ Accordion Container -->
+<div class="max-w-4xl mx-auto space-y-4" id="faqList">
+<!-- FAQ 1: Trial Expiration -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all cursor-pointer" data-category="pricing" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">timer_off</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">ماذا يحدث بالضبط عند انتهاء فترة التجربة المجانية (7 أيام)؟</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-answer hidden mt-4 pt-3 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          بياناتك، مخزنك، فواتيرك، وقوائم الأسعار التي أدخلتها تبقى محفوظة 100% ولن تفقد أي معلومة. عند انتهاء الأيام السبعة تظهر شاشة تنبيه بسيطة تطلب إدخال مفتاح التفعيل الدائم. بمجرد إدخال الكود المستلم عبر واتساب، يفتح البرنامج مباشرة بنفس البيانات وتستأنف عملك فوراً وبكل سلاسة.
+        </div>
+</div>
+<!-- FAQ 2: Pricing Structure -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all cursor-pointer" data-category="pricing" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">payments</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">هل مبلغ 15,000 دج يدفع مرة واحدة أم هو اشتراك سنوي؟</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-answer hidden mt-4 pt-3 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          المبلغ يدفع <strong>مرة واحدة فقط مدى الحياة (Lifetime License)</strong> بدون أي رسوم اشتراك شهرية أو سنوية خفية. يشمل السعر أيضاً الدعم التقني، التحديثات المستقبلية لفرع الإصدار v2.x، وضمان نقل الترخيص لجهاز بديل في حال تعطل جهازك.
+        </div>
+</div>
+<!-- FAQ 3: Multi-PC -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all cursor-pointer" data-category="pricing" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">lan</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">هل يمكن تشغيل نفس الترخيص على أكثر من كمبيوتر في نفس المحل؟</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-answer hidden mt-4 pt-3 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          الترخيص الأساسي يولد مفتاحاً مشفراً لجهاز كمبيوتر رئيسي واحد (Server/POS). إذا كان لديك كاشير إضافي أو جهاز إدارة في الخلف، يمكنك ربطهما على نفس الشبكة المحلية (Local LAN) باقتناء رخصة إضافية مخفضة تبلغ 7,000 دج فقط لكل شاشة إضافية، مع مزامنة فورية وموحدة للمخزون والفواتير.
+        </div>
+</div>
+<!-- FAQ 4: How to Pay -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all cursor-pointer" data-category="pricing" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">account_balance_wallet</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">كيف أدفع وأحصل على كود التفعيل عبر بريدي موب BaridiMob أو CCP؟</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-answer hidden mt-4 pt-3 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          عملية الدفع بسيطة جداً:
+          <ul class="list-disc list-inside mt-2 space-y-1">
+<li>قم بتحويل 15,000 دج إلى حساب بريدي موب RIP الخاص بمؤسستنا (يظهر في نافذة الدفع داخل البرنامج أو عبر مراسلتنا).</li>
+<li>أو عبر الحساب البريدي الجاري CCP في أي مركز بريد في الجزائر.</li>
+<li>خذ صورة أو لقطة شاشة للوصل، وأرسلها عبر واتساب مع معرّف الجهاز (Machine ID).</li>
+<li>يتم توليد المفتاح ومشاركته معك فوراً في غضون 5 إلى 10 دقائق.</li>
+</ul>
+</div>
+</div>
+<!-- FAQ 5: Offline Work -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all cursor-pointer" data-category="hardware" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">wifi_off</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">هل يحتاج البرنامج إلى اتصال إنترنت ليعمل داخل المتجر؟</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-answer hidden mt-4 pt-3 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<strong>إطلاقاً، لا يحتاج لأي اتصال بالإنترنت.</strong> نظام AN POS مبني كبرنامج محلي أصيل (100% Offline Desktop Application)، مما يضمن سرعة بيع فورية (أجزاء من الثانية للمنتج)، حماية بياناتك من انقطاعات الإنترنت، واستقراراً تاماً للمبيعات طوال ساعات العمل. تحتاج الإنترنت فقط لطلب مساعدة عن بعد أو إرسال ملفات النسخ الاحتياطي السحابي إن أردت.
+        </div>
+</div>
+<!-- FAQ 6: Thermal Printer & Drawer -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all cursor-pointer" data-category="hardware" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">receipt_long</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">هل الطابعة الحرارية ودرج النقود وقارئ الباركود يعملون تلقائياً؟</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-answer hidden mt-4 pt-3 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          نعم. البرنامج مجهز برمجياً للتعرف الفوري على قارئات الباركود اللاسلكية والـ USB (Plug and Play)، كما يدعم الطابعات الحرارية الشائعة في الجزائر مقاس 80 مم و 58 مم، ويدعم أمر فتح درج النقود الآلي عبر منفذ RJ11 بمجرد ضغط زر الدفع أو زر <kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-keycap text-label-keycap">F12</kbd>.
+        </div>
+</div>
+<!-- FAQ 7: PC Breakdown -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-5 shadow-[0_1px_3px_rgba(15,23,42,0.05)] transition-all cursor-pointer" data-category="data" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">device_reset</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">ماذا أفعل لو تعطل كمبيوتر المحل وأردت نقل البرنامج لجهاز آخر؟</h3>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200 faq-icon">expand_more</span>
+</div>
+<div class="faq-answer hidden mt-4 pt-3 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          حقك مضمون تماماً. بمجرد تواصلك معنا وإثبات هويتك أو رقم وصل الشراء السابق، يقوم فريق الدعم الفني بتوليد كود ترخيص جديد لجهازك الجديد <strong>مجاناً دون أي تكلفة إضافية</strong>، ومساعدتك عبر AnyDesk لاسترجاع آخر نسخة احتياطية لمحلك التجاري.
+        </div>
+</div>
+</div>
+</div>
+<!-- Direct Support Ticket & Quick Help Form -->
+<div class="w-full bg-surface-container-low py-16" id="quick-ticket">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<div class="bg-surface-container-lowest rounded-xl p-8 lg:p-10 shadow-[0_4px_20px_rgba(11,28,48,0.06)]">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary text-[26px]">contact_support</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">تذكرة مساعدة سريعة</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">لم تجد حلاً لمشكلتك؟ أرسل طلب مساعدة فوري</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">املأ الاستمارة وسيتصل بك فني مختص عبر الهاتف أو واتساب لمساعدتك خلال دقائق معدودة.</p>
+<form class="space-y-6" id="supportForm" onsubmit="handleSupportSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Store / Business Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="storeName">اسم المحل أو النشاط التجاري *</label>
+<input class="px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none transition-all" id="storeName" placeholder="مثال: سوبرماركت البركة، صيدلية النور..." required="" type="text"/>
+</div>
+<!-- Phone / WhatsApp -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="phoneNum">رقم الهاتف (للتواصل عبر واتساب) *</label>
+<input class="px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none transition-all text-right" dir="ltr" id="phoneNum" placeholder="0660 00 00 00" required="" type="tel"/>
+</div>
+<!-- Wilaya -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="wilaya">الولاية (58 ولاية) *</label>
+<select class="px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="wilaya" required="">
+<option disabled="" selected="" value="">اختر ولايتك</option>
+<option value="16 - الجزائر العاصمة">16 - الجزائر العاصمة</option>
+<option value="31 - وهران">31 - وهران</option>
+<option value="25 - قسنطينة">25 - قسنطينة</option>
+<option value="19 - سطيف">19 - سطيف</option>
+<option value="06 - بجاية">06 - بجاية</option>
+<option value="09 - البليدة">09 - البليدة</option>
+<option value="35 - بومرداس">35 - بومرداس</option>
+<option value="15 - تيزي وزو">15 - تيزي وزو</option>
+<option value="13 - تلمسان">13 - تلمسان</option>
+<option value="05 - باتنة">05 - باتنة</option>
+<option value="07 - بسكرة">07 - بسكرة</option>
+<option value="30 - ورقلة">30 - ورقلة</option>
+<option value="47 - غرداية">47 - غرداية</option>
+<option value="أخرى">ولاية أخرى من الـ 58 ولاية</option>
+</select>
+</div>
+<!-- Issue Type -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="issueType">نوع الطلب أو المشكلة *</label>
+<select class="px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="issueType" required="">
+<option value="تفعيل الترخيص الدائم">تفعيل الترخيص الدائم (إرسال الوصل)</option>
+<option value="ضبط وتعريف طابعة حرارية">ضبط وتعريف طابعة حرارية أو باركود</option>
+<option value="نقل البرنامج لجهاز كمبيوتر جديد">نقل البرنامج لجهاز كمبيوتر جديد</option>
+<option value="مساعدة في استيراد ملف Excel">مساعدة في استيراد ملف Excel الأصناف</option>
+<option value="طلب تدريب أو زيارة ميدانية">طلب تدريب أو زيارة تقنية لمحل</option>
+<option value="استفسار عام آخر">استفسار عام آخر</option>
+</select>
+</div>
+</div>
+<!-- AnyDesk ID Optional -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="anydeskId">رقم AnyDesk للتحكم عن بعد (اختياري للإسراع)</label>
+<span class="font-label-keycap text-label-keycap text-on-surface-variant">تسريع الحل</span>
+</div>
+<input class="px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none transition-all text-right" dir="ltr" id="anydeskId" placeholder="مثال: 123 456 789" type="text"/>
+</div>
+<!-- Issue details -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="issueDesc">تفاصيل إضافية عن المشكلة (اختياري)</label>
+<textarea class="px-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none transition-all resize-none" id="issueDesc" placeholder="اكتب نوع جهاز الطابعة، أو رسالة الخطأ التي ظهرت لك..." rows="3"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-8 py-3.5 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-primary-container transition-all active:translate-y-0.5" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>إرسال طلب الدعم الفوري عبر واتساب</span>
+</button>
+<div class="flex items-center gap-2 text-on-tertiary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>متاح طاقم دعم فني متخصص للرد الفوري</span>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Trust & Warranty Guarantee Banner -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12">
+<div class="rounded-xl bg-primary text-on-primary p-8 lg:p-12 relative overflow-hidden shadow-lg">
+<div class="absolute -end-16 -top-16 w-64 h-64 rounded-full bg-secondary-container/20 blur-2xl"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest/10 backdrop-blur-sm flex items-center justify-center text-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-[32px]">workspace_premium</span>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/20 text-on-primary font-label-keycap text-label-keycap">التزام AN POS الرسمي</span>
+<h3 class="font-headline-md text-headline-md text-on-primary mt-2">دعم فني مستمر ومجاني بعد الشراء مدى الحياة</h3>
+<p class="font-body-md text-body-md text-on-primary-container mt-1 max-w-2xl">
+              شراء الترخيص ليس مجرد برنامج، بل شراكة دائمة لضمان سير أعمال محلك دون أي توقف أو أخطاء محاسبية. نحن معكم خطوة بخطوة في كامل الـ 58 ولاية.
+            </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-4 shrink-0">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-lg text-body-lg font-bold hover:bg-surface-container-low transition-all" href="https://wa.me/213000000000" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">support</span>
+<span>تحدث مع تقني الآن</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Logic -->
+<script>
+  // Filter FAQ items via input
+  function filterContent(query) {
+    const q = query.toLowerCase().trim();
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(q)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  }
+
+  // Quick tag search trigger
+  function setSearch(tag) {
+    const input = document.getElementById('faqSearchInput');
+    input.value = tag;
+    filterContent(tag);
+    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // Category switch
+  function switchFaqCategory(category, buttonEl) {
+    const tabs = document.querySelectorAll('.faq-tab');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+      tab.classList.add('bg-surface-container', 'text-on-surface');
+    });
+    buttonEl.classList.remove('bg-surface-container', 'text-on-surface');
+    buttonEl.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  }
+
+  // Accordion toggle
+  function toggleFaq(itemEl) {
+    const answer = itemEl.querySelector('.faq-answer');
+    const icon = itemEl.querySelector('.faq-icon');
+    const isHidden = answer.classList.contains('hidden');
+
+    // Close others
+    document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+    document.querySelectorAll('.faq-icon').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+    if (isHidden) {
+      answer.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  // Handle Form Submission -> WhatsApp redirect
+  function handleSupportSubmit(e) {
+    e.preventDefault();
+    const store = document.getElementById('storeName').value;
+    const phone = document.getElementById('phoneNum').value;
+    const wilaya = document.getElementById('wilaya').value;
+    const issue = document.getElementById('issueType').value;
+    const anydesk = document.getElementById('anydeskId').value || 'غير متوفر';
+    const desc = document.getElementById('issueDesc').value || 'لا يوجد تفاصيل إضافية';
+
+    const message = encodeURIComponent(
+      `*طلب دعم فني جديد - برنامج AN POS*\n\n` +
+      `🏪 المحل: ${store}\n` +
+      `📍 الولاية: ${wilaya}\n` +
+      `📞 رقم الهاتف: ${phone}\n` +
+      `⚠️ نوع المشكلة: ${issue}\n` +
+      `💻 رقم AnyDesk: ${anydesk}\n` +
+      `📝 ملاحظات: ${desc}`
+    );
+
+    window.open(`https://wa.me/213000000000?text=${message}`, '_blank');
+  }
+</script></main><aside class="fixed bottom-6 start-6 z-40 flex items-center"><a class="group flex items-center gap-space-sm px-space-lg py-space-md rounded-full bg-surface-container-lowest text-on-surface shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:bg-surface-container-low transition-all active:scale-95" href="https://wa.me/213000000000" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-[20px]">chat</span></div><div class="flex flex-col text-start"><span class="font-label-keycap text-label-keycap text-on-tertiary-container">متاح للرد الآن</span><span class="font-body-md text-body-md font-semibold text-on-surface">مساعد واتساب الفوري</span></div></a></aside><footer class="w-full bg-surface-container-low mt-16"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-16"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="font-headline-md text-headline-md leading-none">AN</span></div><div class="flex flex-col"><span class="font-title-lg text-title-lg text-on-surface">برنامج AN POS الجزائري</span><span class="font-label-sm text-label-sm text-on-surface-variant">الحل الاحترافي الأسرع لإدارة المتاجر ونقاط البيع</span></div></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">منظومة دفع ومخازن متطورة، تدعم أجهزة الباركود، الطابعات الحرارية، شاشات اللمس، وتعمل بكفاءة تامة دون الحاجة إلى إنترنت مستمر.</p><div class="flex flex-col gap-space-xs pt-2"><div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-xl bg-surface-container text-on-surface max-w-fit"><span class="material-symbols-outlined text-[18px] text-on-tertiary-container">verified_user</span><span class="font-label-sm text-label-sm">متوافق كلياً مع معايير الضرائب والفواتير المعتمدة في الجزائر</span></div></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-lg text-title-lg text-on-surface font-semibold">روابط النظام</span><div class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">الرئيسية</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">المميزات والعتاد المتوافق</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="downloads" href="#">مركز التحميلات والتحديثات</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">الأسعار ورخص الاستخدام</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-lg text-title-lg text-on-surface font-semibold">الدعم الفني والخدمات</span><div class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="support" href="#">مركز المساعدة والأسئلة الشائعة</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">طلب تدريب أو زيارة تقنية</a><span class="font-body-md text-body-md text-on-surface-variant">الهاتف: 0550-00-00-00</span><span class="font-body-md text-body-md text-on-surface-variant">واتساب: 0660-00-00-00</span><span class="font-body-md text-body-md text-on-surface-variant">أوقات العمل: السبت - الخميس (8:00 - 18:00)</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-lg text-title-lg text-on-surface font-semibold">طرق الدفع والتفعيل المتاحة</span><p class="font-body-md text-body-md text-on-surface-variant">تفعيل فوري للتراخيص بعد إتمام المعاملة المالية عبر:</p><div class="flex flex-wrap gap-space-xs pt-1"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><span class="material-symbols-outlined text-[16px] text-secondary">account_balance_wallet</span><span class="font-label-keycap text-label-keycap">BaridiMob بريدي موب</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><span class="material-symbols-outlined text-[16px] text-secondary">markunread_mailbox</span><span class="font-label-keycap text-label-keycap">حساب بريد الجزائر CCP</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><span class="material-symbols-outlined text-[16px] text-secondary">handshake</span><span class="font-label-keycap text-label-keycap">الدفع نقداً عند التثبيت</span></div></div></div></div><div class="mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container/60 p-space-lg rounded-xl"><div class="flex items-center gap-space-sm text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">copyright</span><span class="font-body-md text-body-md">جميع الحقوق محفوظة لنظام AN POS © 2025. مسجل ومطور في الجزائر.</span></div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant">أداء محلي فائق السرعة وبنية برمجية موثوقة للأنشطة التجارية</span></div></div></div></footer></body></html>

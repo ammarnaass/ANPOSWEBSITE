@@ -1,0 +1,364 @@
+@import "tailwindcss";
+
+@theme {
+  /* Blue — مستوحى من دائرة الشعار وعربة التسوق */
+  --color-cash-50: #eff6ff;
+  --color-cash-100: #dbeafe;
+  --color-cash-200: #bfdbfe;
+  --color-cash-300: #93c5fd; /* ← كان مفقوداً: 12 استخداماً لم تكن تُولَّد */
+  --color-cash-400: #60a5fa;
+  --color-cash-500: #3b82f6;
+  --color-cash-600: #2563eb;
+  --color-cash-700: #1d4ed8;
+  --color-cash-800: #1e40af;
+  --color-cash-900: #1e3a8a;
+
+  /* Dark navy surfaces — مستوحاة من خلفية الشعار */
+  --color-paper-50: #111d33;
+  --color-paper-100: #0a1120;
+  --color-paper-200: #16243d;
+  --color-paper-300: #23354f;
+
+  --color-ink: #f1f5f9;
+  --color-ink-soft: #94a3b8;
+
+  /* ===== توكنات دلالية — تباين مضمون ≥ 4.5:1 على كل الأسطح الداكنة =====
+     استخدمها بدل درجات cash الخام عند وضع نص/أيقونة على خلفية داكنة.
+     خريطة التباين المرجعية:
+       accent (cash-500)  → 5.13 / 4.58 / 4.22  ✅
+       accent-text (cash-300) → 9.55 / 8.53 / 7.86 ✅
+       danger (red-400)   → 6.82 / 6.09 / 5.61  ✅
+     ممنوع: cash-600 (3.65/3.26/3.00) · cash-700 (2.81/2.51/2.31) · red-600 (3.90/3.49/3.21) */
+  --color-accent: #2563eb; /* خلفية الأزرار الأساسية (cash-600) */
+  --color-accent-hover: #3b82f6; /* حالة المرور (cash-500) */
+  --color-accent-on: #ffffff; /* النص فوق accent */
+  --color-accent-text: #93c5fd; /* نص وأيقونات ملوّنة على خلفية داكنة (cash-300) */
+  --color-accent-soft: #2563eb26; /* سطح شريحة زرقاء شفافة */
+  --color-accent-border: #3b82f680; /* إطار شريحة زرقاء */
+  --color-danger: #f87171; /* رسائل الخطأ */
+  --color-success: #4ade80;
+  --color-warning: #facc15;
+
+  /* ===== سلّم الحواف الموحّد ===== */
+  --radius-card: 0.875rem; /* البطاقات والنوافذ */
+  --radius-control: 0.625rem; /* الأزرار والحقول */
+  --radius-pill: 9999px; /* الشرائح والشارات */
+
+  /* ===== إيقاع الأقسام ===== */
+  --spacing-section: 4rem; /* py-16 — الصفحات الداخلية */
+  --spacing-section-lg: 7rem; /* lg:py-28 — الأقسام الرئيسية */
+
+
+  --font-sans: "Cairo", "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+/* ============================================================
+   الطبقة الأساسية — قواعد عامة للوصولية والاتساق
+   ============================================================ */
+@layer base {
+  html {
+    /* يجعل أشرطة التمرير وحقول النظام الافتراضية داكنة ومتناسقة */
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper-100);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* حلقة تركيز موحّدة لكل العناصر التفاعلية */
+  :focus-visible {
+    outline: 2px solid var(--color-cash-400);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-cash-600);
+    color: #fff;
+  }
+
+  /* الروابط الداخلية لا تختفي تحت الهيدر اللاصق */
+  :target,
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  /* احترام تفضيل تقليل الحركة */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* Dashed "tear line" like thermal receipt paper */
+.tear-line {
+  border: none;
+  border-top: 2px dashed var(--color-paper-300);
+}
+
+/* ============================================================
+   طبقة المكونات الموحّدة
+   استخدمها بدل تكرار الأدوات في الصفحات لضمان التناسق.
+   ============================================================ */
+@layer components {
+  /* ---- حاويات وإيقاع ---- */
+  .container-page {
+    width: 100%;
+    max-width: 72rem; /* max-w-6xl */
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .section {
+    padding-block: var(--spacing-section);
+  }
+  @media (min-width: 1024px) {
+    .section {
+      padding-block: var(--spacing-section-lg);
+    }
+  }
+
+  /* ---- سلّم العناوين الموحّد (سلّم واحد لكل الموقع) ---- */
+  .h-display,
+  .h-page,
+  .h-section,
+  .h-sub {
+    font-weight: 900;
+    color: var(--color-ink);
+  }
+  .h-display {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  .h-page {
+    font-size: 1.875rem;
+    line-height: 1.25;
+  }
+  .h-section {
+    font-size: 1.875rem;
+    line-height: 1.25;
+  }
+  .h-sub {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  @media (min-width: 640px) {
+    .h-display {
+      font-size: 3rem;
+    }
+    .h-page,
+    .h-section {
+      font-size: 2.25rem;
+    }
+    .h-sub {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* ---- البطاقات ---- */
+  /* .receipt-card أُبقي كاسم بديل أثناء الترحيل التدريجي */
+  .card,
+  .receipt-card {
+    background: var(--color-paper-50);
+    border: 1px solid var(--color-paper-300);
+    border-radius: var(--radius-card);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(37, 99, 235, 0.08);
+  }
+
+  /* حشو البطاقة الموحّد: 3 أحجام فقط */
+  .card-pad {
+    padding: 1.5rem;
+  }
+  .card-pad-sm {
+    padding: 1.25rem;
+  }
+  .card-pad-lg {
+    padding: 2rem;
+  }
+  @media (min-width: 640px) {
+    .card-pad-lg {
+      padding: 2.5rem;
+    }
+  }
+
+  /* ---- الأزرار ---- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-control);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-accent-on);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--color-paper-300);
+    background-color: var(--color-paper-50);
+    color: var(--color-ink);
+  }
+  .btn-ghost:hover {
+    background-color: var(--color-paper-200);
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+  .btn-lg {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  /* ---- الشرائح والشارات ---- */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-accent-border);
+    background-color: var(--color-accent-soft);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent-text);
+  }
+
+  /* kicker موحّد فوق العناوين */
+  .kicker {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-accent-text);
+  }
+
+  /* ---- الحقول والنماذج ---- */
+  .field-input {
+    margin-top: 0.375rem;
+    width: 100%;
+    border-radius: var(--radius-control);
+    border: 1px solid var(--color-paper-300);
+    background-color: var(--color-paper-100);
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    color: var(--color-ink);
+  }
+  .field-input::placeholder {
+    color: var(--color-ink-soft);
+    opacity: 0.6;
+  }
+  .field-input:focus {
+    border-color: var(--color-cash-500);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  }
+
+  .field-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+
+  .field-error {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-danger); /* كان red-600 بتباين 3.49 → الآن 6.09 ✅ */
+  }
+
+  /* ---- التنبيهات ---- */
+  .alert {
+    border-radius: var(--radius-control);
+    border: 1px solid var(--color-accent-border);
+    background-color: var(--color-accent-soft);
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    color: var(--color-accent-text);
+  }
+}
+
+/* Subtle zigzag bottom edge for receipt blocks */
+.receipt-edge {
+  height: 10px;
+  background:
+    linear-gradient(-45deg, transparent 70%, var(--color-paper-50) 70%) 0 0 / 14px 10px repeat-x,
+    linear-gradient(45deg, transparent 70%, var(--color-paper-50) 70%) 7px 0 / 14px 10px repeat-x;
+}
+
+/* أرقام الأسعار — عرض ثابت العرض (tabular) لتناسق أسعار الباقات */
+.price-digits {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* ---- الحركات ---- */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise-in {
+  animation: rise-in 0.5s ease-out both;
+}
+
+/* زجاجية الهيدر عند التمرير — Header.tsx يضيف class "scrolled" */
+header.scrolled {
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.15);
+}
+
+/* رابط تجاوز إلى المحتوى (وصولية) */
+.skip-link {
+  position: absolute;
+  right: 1rem;
+  top: -100%;
+  z-index: 100;
+  border-radius: var(--radius-control);
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed-variant":"#003ea8","surface-container-low":"#eff4ff","surface-container":"#e5eeff","error-container":"#ffdad6","on-tertiary-fixed":"#002114","on-surface":"#0b1c30","on-tertiary":"#ffffff","outline":"#75777d","error":"#ba1a1a","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#3b475e","outline-variant":"#c5c6cd","secondary-container":"#316bf3","secondary-fixed-dim":"#b4c5ff","surface-variant":"#d3e4fe","secondary":"#0051d5","on-background":"#0b1c30","surface-bright":"#f8f9ff","inverse-surface":"#213145","on-secondary":"#ffffff","tertiary-container":"#002114","inverse-on-surface":"#eaf1ff","tertiary-fixed":"#85f8c4","primary-fixed":"#d7e2ff","on-secondary-fixed":"#00174b","on-tertiary-container":"#069669","background":"#f8f9ff","on-secondary-container":"#fefcff","surface-dim":"#cbdbf5","tertiary-fixed-dim":"#68dba9","secondary-fixed":"#dbe1ff","surface":"#f8f9ff","inverse-primary":"#bbc6e3","surface-tint":"#535e77","primary":"#000000","primary-fixed-dim":"#bbc6e3","on-error":"#ffffff","tertiary":"#000000","surface-container-high":"#dce9ff","on-primary":"#ffffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#005137","on-primary-fixed":"#101b30","on-error-container":"#93000a","on-primary-container":"#78849e","on-surface-variant":"#45474d","primary-container":"#101b30"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-lg":"1.25rem","space-md":"0.75rem","space-xs":"0.25rem","space-xl":"1.75rem","gutter":"0.75rem","margin":"1rem"},"fontFamily":{"label-sm":["IBM Plex Sans"],"headline-md":["IBM Plex Sans"],"title-lg":["IBM Plex Sans"],"body-md":["IBM Plex Sans"],"headline-lg":["IBM Plex Sans"],"display-total":["IBM Plex Sans"],"body-lg":["IBM Plex Sans"],"label-keycap":["IBM Plex Sans"]},"fontSize":{"label-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"30px","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}],"display-total":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"label-keycap":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">point_of_sale</span></div><span class="font-headline-md text-headline-md tracking-tight text-on-surface">AN POS</span></a><span class="font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-on-primary-fixed-variant">النسخة v2.4</span></div><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-surface-container text-on-surface font-bold rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-container text-on-surface font-bold rounded-lg" data-path="home" href="#">الرئيسية</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">المميزات</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="downloads" href="#">التحميل</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">التسعير والتفعيل</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="support" href="#">الدعم والأسئلة</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">تواصل معنا</a></nav><div class="flex items-center gap-space-md"><a class="font-body-md text-body-md px-space-lg py-space-sm rounded-xl bg-secondary text-on-secondary hover:bg-secondary-container transition-all flex items-center gap-space-xs shadow-[0_2px_4px_rgba(14,26,47,0.08)]" data-path="downloads" href="#"><span>تحميل مجاني (تجربة 7 أيام)</span><span class="font-label-keycap text-label-keycap bg-surface-container-lowest/20 px-space-xs py-0.5 rounded">F12</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Hero Section with Tactical Split and Elevated Mockup -->
+<section class="relative overflow-hidden pt-space-xl pb-space-xl px-6 lg:px-12 bg-surface">
+<!-- Ambient Glow / Backdrop Depth -->
+<div class="absolute -top-32 -start-32 w-96 h-96 bg-secondary-fixed/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -end-32 w-[32rem] h-[32rem] bg-tertiary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<!-- Content Column (RTL Right side) -->
+<div class="lg:col-span-6 flex flex-col items-start text-start">
+<!-- Status Tag -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container mb-space-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">إصدار الجزائر 2025 • معتمد ومطابق للمعايير الجبائية</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container-lowest px-1.5 py-0.5 rounded text-secondary font-bold">DZ-POS</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-total text-display-total tracking-tight text-on-surface mb-space-md">
+          نظّم مبيعات متجرك ومخزونك <br class="hidden sm:inline"/>
+<span class="text-secondary inline-block">من جهاز واحد أو عدة أجهزة</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-lg leading-relaxed">
+          نظام كاشير ونقاط بيع متكامل لسطح المكتب والهاتف. صُمم خصيصاً للمحلات والمتاجر الجزائرية لسرعة البيع الفائقة، إدارة المخزون اللحظية، ودعم الطابعات الحرارية والمعايير الجبائية المحلية.
+        </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md w-full sm:w-auto mb-space-lg">
+<a class="w-full sm:w-auto flex items-center justify-center gap-space-sm px-space-xl py-space-md bg-secondary hover:bg-secondary-container text-on-secondary rounded-xl font-headline-md text-title-lg transition-all shadow-md active:translate-y-0.5 group" href="#">
+<span class="material-symbols-outlined text-[24px]">download</span>
+<span>حمّل التطبيق – جرّبه 7 أيام مجاناً</span>
+<span class="font-label-keycap text-label-keycap bg-on-secondary/20 px-space-xs py-0.5 rounded">F12</span>
+</a>
+<a class="w-full sm:w-auto flex items-center justify-center gap-space-xs px-space-lg py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded-xl font-body-lg text-body-lg transition-colors" href="#features">
+<span class="material-symbols-outlined text-[20px] text-secondary">visibility</span>
+<span>شاهد المميزات الكاملة</span>
+</a>
+</div>
+<!-- Quick Spec Stats -->
+<div class="grid grid-cols-3 gap-space-md w-full max-w-lg pt-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">0.1 ثانية</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">زمن قراءة وطباعة الباركود</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="font-headline-md text-headline-md text-secondary font-bold">100% أوفلاين</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">عمل متواصل بلا انقطاع</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">58 ولاية</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">تغطية ودعم فني معتمد</div>
+</div>
+</div>
+</div>
+<!-- Device Showcase / Mockups (Interactive Styled POS Terminal UI) -->
+<div class="lg:col-span-6 relative mt-space-lg lg:mt-0">
+<!-- Background subtle frame glow -->
+<div class="relative w-full rounded-2xl bg-surface-container-lowest p-space-sm shadow-xl">
+<!-- Mockup Window Chrome -->
+<div class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-t-xl mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed"></span>
+<span class="font-label-keycap text-label-keycap text-on-surface-variant ms-space-xs">AN POS v2.4 • نظام كاشير نقطة بيع مباشر</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-keycap text-label-keycap bg-surface-container px-2 py-0.5 rounded text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-ping"></span>
+                ماسح الباركود متصل
+              </span>
+<span class="font-label-keycap text-label-keycap bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded">جلسة #01</span>
+</div>
+</div>
+<!-- Screen Workspace Mirroring Screenshot Layout -->
+<div class="bg-surface-bright rounded-b-xl p-space-sm grid grid-cols-12 gap-space-xs">
+<!-- Left Panel: Summary & Metrics (Mirror of Screenshot 1) -->
+<div class="col-span-8 flex flex-col gap-space-xs">
+<!-- Quick Stats Strip -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-space-xs rounded bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-keycap text-label-keycap text-on-surface-variant">المخزون الكلي</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">inventory_2</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">16 <span class="font-label-sm text-label-sm text-on-surface-variant">صنف</span></span>
+<span class="font-label-keycap text-label-keycap text-on-tertiary-container">النشطة: 16 صنف</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-keycap text-label-keycap text-on-surface-variant">مخزون منخفض</span>
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+</div>
+<span class="font-headline-md text-headline-md text-error">2 <span class="font-label-sm text-label-sm text-on-surface-variant">أصناف</span></span>
+<span class="font-label-keycap text-label-keycap text-error">تحت حد الأمان</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-keycap text-label-keycap text-on-surface-variant">القيمة الإجمالية</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">trending_up</span>
+</div>
+<span class="font-title-lg text-title-lg text-on-surface">418.047 <span class="font-label-keycap text-label-keycap">دج</span></span>
+<span class="font-label-keycap text-label-keycap text-on-tertiary-container">هامش ربح متوقع +59%</span>
+</div>
+</div>
+<!-- POS Search and Shortcut Actions -->
+<div class="bg-surface-container-lowest p-space-xs rounded shadow-sm flex items-center gap-space-xs">
+<div class="flex-1 flex items-center bg-surface-container-low px-space-xs py-1 rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] me-1">search</span>
+<span class="font-label-sm text-label-sm">ابحث بالاسم، الباركود أو رقم SKU...</span>
+</div>
+<button class="bg-secondary text-on-secondary px-space-xs py-1 rounded font-label-keycap text-label-keycap flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">add</span> صنف جديد
+                </button>
+</div>
+<!-- Product Grid Demo Tiles -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-keycap text-label-keycap bg-surface-container-high px-1 py-0.5 rounded text-secondary font-bold">عبوة ×24</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold truncate mt-1">كرتونة أرز بسمتي 1 كغ</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">960,00 <span class="font-label-keycap text-label-keycap text-on-surface-variant">دج</span></span>
+<span class="material-symbols-outlined text-[18px] text-secondary">add_circle</span>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-keycap text-label-keycap bg-surface-container-high px-1 py-0.5 rounded text-secondary font-bold">عبوة ×6</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold truncate mt-1">حليب معقم 1 لتر</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">600,00 <span class="font-label-keycap text-label-keycap text-on-surface-variant">دج</span></span>
+<span class="material-symbols-outlined text-[18px] text-secondary">add_circle</span>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-sm">
+<span class="font-label-keycap text-label-keycap bg-surface-container-high px-1 py-0.5 rounded text-secondary font-bold">عبوة ×8</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold truncate mt-1">كرتونة شاحن سريع 25W</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">2.000,00 <span class="font-label-keycap text-label-keycap text-on-surface-variant">دج</span></span>
+<span class="material-symbols-outlined text-[18px] text-secondary">add_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Cart & Tender Box -->
+<div class="col-span-4 bg-surface-container-low p-space-xs rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-1 mb-1">
+<span class="font-body-md text-body-md font-bold text-on-surface">سلة الفاتورة #142</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-1 py-0.5 rounded text-on-surface">3 أصناف</span>
+</div>
+<div class="space-y-1">
+<div class="bg-surface-container-lowest p-1 rounded text-start flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm truncate max-w-[90px]">كرتونة أرز بسمتي</span>
+<span class="font-label-sm text-label-sm font-bold">960 دج</span>
+</div>
+<div class="bg-surface-container-lowest p-1 rounded text-start flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm truncate max-w-[90px]">حليب معقم 1 لتر</span>
+<span class="font-label-sm text-label-sm font-bold">600 دج</span>
+</div>
+<div class="bg-surface-container-lowest p-1 rounded text-start flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm truncate max-w-[90px]">شاحن سريع 25W</span>
+<span class="font-label-sm text-label-sm font-bold">2.000 دج</span>
+</div>
+</div>
+</div>
+<!-- Grand Total Callout Box Inside Terminal -->
+<div class="bg-primary-container text-on-primary p-space-xs rounded mt-2">
+<div class="flex items-center justify-between font-label-keycap text-label-keycap text-on-primary-container">
+<span>المجموع الصافي:</span>
+<span>شامل الرسم الجبائي</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-tertiary-fixed text-end">
+                  3.560,00 <span class="font-label-sm text-label-sm text-on-primary">دج</span>
+</div>
+<div class="grid grid-cols-2 gap-1 mt-1">
+<button class="bg-secondary text-on-secondary py-1 rounded font-label-keycap text-label-keycap font-bold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[12px]">print</span> طبع وصل
+                  </button>
+<button class="bg-on-tertiary-container text-on-primary py-1 rounded font-label-keycap text-label-keycap font-bold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[12px]">payments</span> تسديد (F12)
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Overlapping Smartphone Mobile App Companion Mockup -->
+<div class="hidden sm:flex flex-col absolute -bottom-6 -start-6 w-48 rounded-2xl bg-primary-container text-on-primary p-2 shadow-2xl z-20">
+<div class="flex items-center justify-between px-1 mb-1">
+<span class="font-label-keycap text-label-keycap text-tertiary-fixed font-bold">AN POS Mobile</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">signal_cellular_alt</span>
+</div>
+<div class="bg-surface-bright rounded-xl p-2 text-on-surface">
+<div class="font-label-keycap text-label-keycap text-on-surface-variant mb-0.5">مبيعات اليوم الآنية</div>
+<div class="font-title-lg text-title-lg font-bold text-secondary">64.500 <span class="font-label-keycap text-label-keycap">دج</span></div>
+<div class="mt-2 pt-2 border-t border-outline-variant/30 flex items-center justify-between text-start">
+<span class="font-label-keycap text-label-keycap text-on-surface font-semibold">مسح باركود حراري</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">qr_code_scanner</span>
+</div>
+<div class="mt-1 bg-surface-container-high p-1 rounded font-label-keycap text-label-keycap text-center text-on-surface">
+              جرد المخزن عبر الهاتف مفعّل
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Trust Bar (Full Width Card) -->
+<section class="w-full bg-surface-container-low py-space-lg px-6 lg:px-12 shadow-sm">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div>
+<div class="font-title-lg text-title-lg text-on-surface font-bold">تجربة مجانية كاملة 7 أيام</div>
+<div class="font-body-md text-body-md text-on-surface-variant">تفعيل فوري تلقائي بدون بطاقة بنكية وبلا شروط مسبقة.</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-on-tertiary-container/10 flex items-center justify-center text-on-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[28px]">print_connect</span>
+</div>
+<div>
+<div class="font-title-lg text-title-lg text-on-surface font-bold">توافق شامل مع الطابعات</div>
+<div class="font-body-md text-body-md text-on-surface-variant">يدعم طابعات الإيصالات الحرارية USB، Bluetooth، والشبكية 80/58mm.</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[28px]">wifi_off</span>
+</div>
+<div>
+<div class="font-title-lg text-title-lg text-on-surface font-bold">يعمل 100% بدون إنترنت</div>
+<div class="font-body-md text-body-md text-on-surface-variant">بياناتك محفوظة محلياً بالكامل ومحمية مع إمكانية المزامنة السحابية.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Core Features Overview (Bento Grid) -->
+<section class="py-space-xl px-6 lg:px-12 bg-surface" id="features">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center mb-space-xl max-w-2xl mx-auto">
+<span class="font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-secondary uppercase font-bold mb-space-xs">
+          حلول متطورة لمتاجر الجزائر
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-sm">
+          كل ما يحتاجه نشاطك التجاري في واجهة واحدة فائقة السرعة
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          تمت هندسة AN POS ليلغي طوابير الانتظار، يضمن دقة الصندوق بالدينار، ويمنحك السيطرة المطلقة على حركة المخزن والأسعار.
+        </p>
+</div>
+<!-- Bento Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: POS Checkout Speed -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">flash_on</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-space-xs">
+              نقطة بيع فائقة السرعة والكفاءة
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              واجهة تفاعلية مصممة لشاشات اللمس وقارئات الباركود. أزرار مخصصة للمفضلة والعبوات والكراتين السريعة، واختصارات كيبورد عملية (F1 إلى F12) تسرع تدفق الكاشير في أوقات الذروة.
+            </p>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">دعم البيع بالقطعة أو الكرتونة</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-2 py-0.5 rounded text-on-surface">وضع التجزئة والجملة</span>
+</div>
+</div>
+<!-- Card 2: Inventory & Stock Management -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">shelves</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-space-xs">
+              إدارة مخزون لحظية وتنبيه النواقص
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              تحديث تلقائي وفوري للكميات عند كل عملية بيع أو إرجاع. تنبيهات ذكية عند الوصول لحد الأمان، وإمكانية استيراد وتصدير بطاقات المواد بملفات Excel بنقرة زر واحدة.
+            </p>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-bold">حساب تلقائي لمتوسط تكلفة الشراء</span>
+<span class="font-label-keycap text-label-keycap bg-error-container text-on-error-container px-2 py-0.5 rounded">تنبيه حد الأمان</span>
+</div>
+</div>
+<!-- Card 3: Invoicing & Receipts -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">receipt_long</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-space-xs">
+              فوترة وطباعة حرارية مخصصة
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              طباعة فورية للوصولات الحرارية (80mm و 58mm) مع شعار متجرك ورمز QR Code، بالإضافة إلى فواتير المقاس الكامل A4 / A5 للمؤسسات وحسابات الموردين.
+            </p>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">تخصيص كامل لمعلومات الترويسة</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-2 py-0.5 rounded text-on-surface">ESC/POS</span>
+</div>
+</div>
+<!-- Card 4: Fiscal Compliance Algeria -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-space-xs">
+              امتثال للمعايير الجبائية والمحاسبية
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              دعم كامل للمعلومات القانونية الجزائرية: رقم التعريف الجبائي (NIF)، السجل التجاري (RC)، رقم التعريف الإحصائي (NIS)، وإدارة نسب الرسم على القيمة المضافة (TVA).
+            </p>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">فواتير نظامية معتمدة</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-2 py-0.5 rounded text-secondary font-bold">قانون المالية DZ</span>
+</div>
+</div>
+<!-- Card 5: Real-time Reports & Margins -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">analytics</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-space-xs">
+              تقارير أرباح وخزينة تفصيلية
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              لوحة تحكم إحصائية تعرض هامش الربح الصافي، المداخيل اليومية والشهرية، تقرير إغلاق الصندوق، وجدول الأكثر مبيعاً لتحديد المنتجات الأعلى عائداً بدقة.
+            </p>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">حساب هوامش الربح الحقيقية</span>
+<span class="font-label-keycap text-label-keycap bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-bold">تقارير Z &amp; X</span>
+</div>
+</div>
+<!-- Card 6: Backup & Cloud Sync -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[26px]">cloud_sync</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-space-xs">
+              نسخ احتياطي محلي وسحابي آمن
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              احمِ سجل مبيعاتك وحسابات الزبائن والموردين بآلية نسخ احتياطي تلقائي مشفرة تُحفظ على قرصك الصلب أو سحابياً لمنع أي فقدان مفاجئ للبيانات.
+            </p>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">تشفير كامل لقواعد البيانات</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-2 py-0.5 rounded text-on-surface">استعادة سريعة</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Desktop vs Mobile Comparison Section -->
+<section class="py-space-xl px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center text-center mb-space-xl max-w-xl mx-auto">
+<span class="font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-secondary uppercase font-bold mb-space-xs">
+          مرونة تشغيل لا متناهية
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-sm">
+          سطح المكتب أم الهاتف الذكي؟
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          يعمل البرنامج بتناغم بين محطات الكاشير الثابتة وأجهزة الهواتف الذكية لمراقبة نشاطك أينما كنت.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Desktop Platform Card -->
+<div class="p-space-xl rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">desktop_windows</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">نسخة سطح المكتب</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Windows 10 / 11 &amp; macOS</span>
+</div>
+</div>
+<span class="font-label-keycap text-label-keycap bg-secondary-fixed text-on-secondary-fixed px- space-sm py-1 rounded font-bold">
+              الأمثل لمحطات البيع
+            </span>
+</div>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+<strong>مثالية لمحطات الكاشير الثابتة وشاشات اللمس:</strong> دعم قارئات الباركود المكتبية، أدراج النقدية (Cash Drawer)، وطابعات الإيصالات الضخمة في السوبرماركت والمحلات الكبيرة.
+              </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+<strong>لوحة تحكم إدارية شاملة:</strong> إدخال الفواتير الضخمة، تصدير تقارير المحاسب، إدارة متعددة لصلاحيات الكاشير، والعمل دون أي اعتماد على شبكة خارجية.
+              </p>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">الحجم: 85 ميجابايت • تثبيت بنقرة واحدة</span>
+<span class="font-label-keycap text-label-keycap text-secondary font-bold">يدعم جميع ملحقات POS</span>
+</div>
+</div>
+<!-- Mobile Platform Card -->
+<div class="p-space-xl rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-xl bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">smartphone</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">نسخة الهاتف والتابلت</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Android &amp; iOS</span>
+</div>
+</div>
+<span class="font-label-keycap text-label-keycap bg-tertiary-fixed text-on-tertiary-fixed px-space-sm py-1 rounded font-bold">
+              إدارة متنقلة وجرد ذكي
+            </span>
+</div>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px] shrink-0 mt-0.5">check_circle</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+<strong>لإدارة المبيعات المتنقلة والجرد السريع:</strong> استخدام كاميرا الهاتف كقارئ باركود سريع لجرد الرفوف بالمخزن والبيع الميداني في المعارض وسيارات التوزيع.
+              </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px] shrink-0 mt-0.5">check_circle</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+<strong>متابعة الأرباح والخزينة عن بُعد:</strong> اطلع على مداخيل محلك لحظة بلحظة وأنت خارج المتجر، واستقبل إشعارات فورية بالمبيعات وتجاوز حد الأمان للمخزون.
+              </p>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">اتصال مباشر عبر البلوتوث بالطابعات المحمولة</span>
+<span class="font-label-keycap text-label-keycap text-on-tertiary-container font-bold">Android APK &amp; iOS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Simplified Transparent Pricing & Activation Section -->
+<section class="py-space-xl px-6 lg:px-12 bg-surface">
+<div class="max-w-5xl mx-auto">
+<div class="p-space-xl rounded-3xl bg-surface-container-lowest shadow-xl text-start relative overflow-hidden">
+<!-- Accent Banner Decor -->
+<div class="absolute top-0 end-0 bg-secondary text-on-secondary px-6 py-2 rounded-es-2xl font-label-keycap text-label-keycap font-bold shadow-sm">
+          عرض خاص بالدينار الجزائري (DZD)
+        </div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Pricing Left Info -->
+<div class="lg:col-span-7 space-y-space-md">
+<span class="font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-secondary font-bold">
+              شفافية مطلقة وبلا اشتراكات متكررة
+            </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight">
+              ابدأ الآن بـ 7 أيام تجربة مجانية بكامل الصلاحيات
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              قم بتحميل البرنامج وتثبيته مباشرة. النظام يمنحك تجربة حية لكافة الوظائف (مبيعات، مخزون، باركود، طباعة). عند انتهاء التجربة ورضاك التام، يمكنك التفعيل مدى الحياة دفعة واحدة دون أي اقتطاعات شهرية.
+            </p>
+<!-- Features Included Checklist -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs font-body-md text-body-md text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">done</span>
+<span>ترخيص أصلي لجهاز الكمبيوتر مدى الحياة</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">done</span>
+<span>تحديثات تقنية مستمرة مجانية</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">done</span>
+<span>دعم فني وتدريب عبر الهاتف والواتساب</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">done</span>
+<span>دعم تطبيق الهاتف الذكي المساعد</span>
+</div>
+</div>
+<!-- Payment Methods Supported -->
+<div class="pt-space-md flex items-center gap-space-md flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">وسائل الدفع والتفعيل المقبولة:</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-2 py-1 rounded text-on-surface font-semibold">بريدي موب BaridiMob</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-2 py-1 rounded text-on-surface font-semibold">حساب البريد الجاري CCP</span>
+<span class="font-label-keycap text-label-keycap bg-surface-container px-2 py-1 rounded text-on-surface font-semibold">تحويل بريدي فوري</span>
+</div>
+</div>
+<!-- Pricing Right Tier Card -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between shadow-sm">
+<div class="text-center pb-space-md border-b border-outline-variant/30">
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1">الترخيص الشامل الدائم</div>
+<div class="flex items-baseline justify-center gap-1">
+<span class="font-display-total text-display-total text-on-surface font-bold">15,000</span>
+<span class="font-title-lg text-title-lg text-on-surface-variant font-bold">دج</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-tertiary-container font-semibold mt-1">
+                دفعة واحدة فقط مدى الحياة • بدون رسوم شهرية
+              </div>
+</div>
+<div class="py-space-md space-y-space-sm text-start">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+<span>تفعيل فوري خلال 5 دقائق بعد التحويل</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+<span>مساعدة عن بُعد بواسطة AnyDesk للتركيب</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-space-xs">
+<a class="w-full flex items-center justify-center gap-space-xs py-space-md bg-secondary hover:bg-secondary-container text-on-secondary rounded-xl font-body-lg text-body-lg font-bold transition-all shadow-md active:translate-y-0.5" href="#">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>تحميل وبدء التجربة المجانية الآن</span>
+</a>
+<a class="w-full flex items-center justify-center gap-space-xs py-space-md bg-tertiary-container text-on-tertiary-container rounded-xl font-body-md text-body-md font-bold hover:bg-tertiary-container/90 transition-all" href="https://wa.me/213000000000?text=%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D8%B1%D9%8A%D8%AF+%D8%AA%D9%81%D8%B9%D9%8A%D9%84+%D9%86%D8%B8%D8%A7%D9%85+AN+POS" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>طلب التفعيل الفوري عبر واتساب</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Customer Store Success Banner -->
+<section class="py-space-lg px-6 lg:px-12 bg-surface-container-lowest mb-space-xl">
+<div class="max-w-7xl mx-auto rounded-2xl bg-primary-container text-on-primary p-space-lg lg:p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-lowest/10 flex items-center justify-center text-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-[36px]">storefront</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md font-bold mb-1">مناسب لجميع الأنشطة التجارية في الجزائر</h4>
+<p class="font-body-md text-body-md text-on-primary-container">
+            المواد الغذائية والسوبرماركت، محلات الأواني، الملابس والأحذية، الهواتف والإلكترونيات، الصيدليات ومستحضرات التجميل، قطع الغيار، والمخابز والمطاعم.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<a class="px-space-lg py-space-md rounded-xl bg-secondary text-on-secondary font-body-md text-body-md font-semibold hover:bg-secondary-container transition-all" href="#">
+          استشر فريقنا لاختيار عتادك المناسب
+        </a>
+</div>
+</div>
+</section>
+</div></main><div class="fixed bottom-6 start-6 z-40"><a class="group flex items-center gap-space-sm bg-tertiary-container text-on-tertiary-container px-space-lg py-space-md rounded-full shadow-[0_4px_16px_rgba(0,33,20,0.2)] hover:scale-105 transition-transform" href="https://wa.me/213000000000" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-on-tertiary-container text-[24px]">chat</span><span class="font-body-md text-body-md font-semibold text-on-tertiary-container">تواصل وتفعيل فوري عبر واتساب</span><span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-pulse"></span></a></div><footer class="w-full bg-surface-container-low shadow-[0_-1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-xl"><div><div class="flex items-center gap-space-sm mb-space-sm"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">point_of_sale</span></div><span class="font-title-lg text-title-lg text-on-surface">AN POS الجزائر</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">المنظومة المحاسبية والبيعية المتكاملة لإدارة المحلات التجارية ونقاط البيع في الجزائر، مهيأة للعمل المكتبي والسحابي وتطبيقات الهواتف الذكية.</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label-sm text-label-sm">متوافق مع المعايير الجبائية والمحاسبية الجزائرية</span></div></div><div><div class="font-title-lg text-title-lg text-on-surface mb-space-md">روابط سريعة</div><ul class="space-y-space-xs"><li dir="rtl"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">الرئيسية للنظام</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">مميزات نقاط البيع</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="downloads" href="#">تنزيل حزمة التثبيت</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">التسعير وطرق التفعيل</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="support" href="#">مركز المساعدة والأسئلة الشائعة</a></li><li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">طلب عرض تجريبي واستشارة</a></li></ul></div><div><div class="font-title-lg text-title-lg text-on-surface mb-space-md">طرق الدفع والتسديد المعتمدة</div><p class="font-body-md text-body-md text-on-surface-variant mb-space-sm">نوفر وسائل تسديد محلية آمنة وفورية لتفعيل اشتراكك وتراخيص البرامج مباشرة:</p><div class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">credit_card</span><span>بريدي موب (BaridiMob)</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">account_balance</span><span>حساب البريد الجاري (CCP)</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-secondary">payments</span><span>حوالة وتحويل بريدي فوري</span></div></div></div><div><div class="font-title-lg text-title-lg text-on-surface mb-space-md">مركز الدعم الفني والمبيعات</div><p class="font-body-md text-body-md text-on-surface-variant mb-space-sm">فريقنا التقني متواجد عبر 58 ولاية لتقديم الدعم والتركيب والتدريب:</p><div class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">call</span><span>+213 (0) 550 00 00 00</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">mail</span><span>support@anpos-dz.com</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">schedule</span><span>السبت - الخميس: 08:30 إلى 18:00</span></div></div></div></div><div class="pt-space-lg border-t border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-space-md font-body-md text-body-md text-on-surface-variant"><p>© 2025 AN POS الجزائر. جميع الحقوق محفوظة.</p><p class="font-label-sm text-label-sm text-on-surface-variant/80">برنامج معتمد لإدارة المخزون ونقاط البيع وفق القانون الجبائي والرقمنة الوطنية.</p></div></div></footer></body></html>
