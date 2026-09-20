@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { WA_ACTIVATE } from '../lib/site'
+import { SITE, WA_ACTIVATE } from '../lib/site'
 
 export default function Home() {
   return (
@@ -84,7 +84,7 @@ export default function Home() {
                   <span className="w-2.5 h-2.5 rounded-full bg-outline-variant" />
                   <span className="w-2.5 h-2.5 rounded-full bg-tertiary-fixed" />
                   <span className="font-label-keycap text-label-keycap text-on-surface-variant ms-space-xs" dir="rtl">
-                    AN POS v2.4 • نظام كاشير نقطة بيع مباشر
+                    {SITE.name} {SITE.version} • نظام كاشير نقطة بيع مباشر
                   </span>
                 </div>
                 <div className="flex items-center gap-space-xs" dir="rtl">

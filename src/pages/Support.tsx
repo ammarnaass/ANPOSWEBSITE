@@ -344,7 +344,7 @@ export default function Support() {
             </div>
             <div className="flex items-center gap-2">
               <span className="font-label-sm text-label-sm text-on-surface-variant">محدثة للإصدار:</span>
-              <span className="px-2 py-0.5 rounded-lg bg-surface-container-highest text-on-surface font-label-keycap text-label-keycap">AN POS v2.4</span>
+              <span className="px-2 py-0.5 rounded-lg bg-surface-container-highest text-on-surface font-label-keycap text-label-keycap">{SITE.name} {SITE.version}</span>
             </div>
           </div>
 

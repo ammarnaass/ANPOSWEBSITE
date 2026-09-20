@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { WA_ACTIVATE, WA_NUMBER_1 } from '../lib/site'
+import { SITE, WA_ACTIVATE, WA_NUMBER_1 } from '../lib/site'
 
 interface FaqItem {
   q: string
@@ -130,7 +130,7 @@ export default function Pricing() {
               <span className="font-body-md text-body-md font-bold">الخيار الأكثر اعتماداً للمحلات والمتاجر الجزائرية</span>
             </div>
             <span className="font-label-keycap text-label-keycap bg-surface-container-lowest/15 px-space-sm py-1 rounded">
-              نسخة شاملة v2.4
+              نسخة شاملة {SITE.version}
             </span>
           </div>
 

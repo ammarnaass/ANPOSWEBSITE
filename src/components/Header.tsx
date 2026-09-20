@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import { SITE } from '../lib/site'
 
 
 export interface NavLinkItem {
@@ -30,7 +31,7 @@ export default function Header() {
             <span className="font-headline-md text-headline-md tracking-tight text-on-surface">AN POS</span>
           </Link>
           <span className="font-label-keycap text-label-keycap px-space-sm py-space-xs rounded bg-surface-container text-on-primary-fixed-variant">
-            النسخة v2.4
+            النسخة {SITE.version}
           </span>
         </div>
 

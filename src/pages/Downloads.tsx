@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { DOWNLOAD_PORTABLE_URL, DOWNLOAD_SETUP_URL, DOWNLOAD_ANDROID_APK_URL, DOWNLOAD_GOOGLE_PLAY_URL, WA_ACTIVATE, WA_NUMBER_1 } from '../lib/site'
+import { SITE, DOWNLOAD_PORTABLE_URL, DOWNLOAD_SETUP_URL, DOWNLOAD_ANDROID_APK_URL, DOWNLOAD_GOOGLE_PLAY_URL, WA_ACTIVATE, WA_NUMBER_1 } from '../lib/site'
 
 
 interface FaqItem {
@@ -40,7 +40,7 @@ export default function Downloads() {
             تحديث مستقر
           </span>
           <p className="font-body-md text-body-md text-on-surface">
-            تم إطلاق تحديث <span className="font-bold text-secondary">AN POS v2.4</span> مع دعم كامل للفوترة الإلكترونية والطابعات الحرارية الشبكية.
+            تم إطلاق تحديث <span className="font-bold text-secondary">{SITE.name} {SITE.version}</span> مع دعم كامل للفوترة الإلكترونية والطابعات الحرارية الشبكية.
           </p>
           <Link
             to="/features"
@@ -117,7 +117,7 @@ export default function Downloads() {
                   <span className="w-3 h-3 rounded-full bg-tertiary-fixed" />
                 </div>
                 <span className="font-label-keycap text-label-keycap text-surface-container" dir="rtl">
-                  AN POS v2.4 • محطة المبيعات النشطة
+                  {SITE.name} {SITE.version} • محطة المبيعات النشطة
                 </span>
                 <div className="flex items-center gap-1 text-tertiary-fixed font-label-keycap text-label-keycap" dir="rtl">
                   <span className="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse" />
@@ -227,7 +227,7 @@ export default function Downloads() {
                     </div>
                   </div>
                   <span className="font-label-keycap text-label-keycap px-space-sm py-1 rounded-lg bg-surface-container text-on-surface font-bold">
-                    v2.4.2
+                    {SITE.downloads.desktopVersion}
                   </span>
                 </div>
 
@@ -235,11 +235,11 @@ export default function Downloads() {
                 <div className="grid grid-cols-3 gap-space-xs p-space-sm bg-surface-container-low rounded-lg text-center">
                   <div>
                     <span className="font-label-keycap text-label-keycap text-on-surface-variant block">النظام</span>
-                    <span className="font-body-md text-body-md text-on-surface font-bold">Windows 10/11</span>
+                    <span className="font-body-md text-body-md text-on-surface font-bold">{SITE.downloads.desktopOs}</span>
                   </div>
                   <div>
                     <span className="font-label-keycap text-label-keycap text-on-surface-variant block">حجم الملف</span>
-                    <span className="font-body-md text-body-md text-on-surface font-bold">~85 MB</span>
+                    <span className="font-body-md text-body-md text-on-surface font-bold">~{SITE.downloads.desktopSize}</span>
                   </div>
                   <div>
                     <span className="font-label-keycap text-label-keycap text-on-surface-variant block">الإنترنت</span>
@@ -282,10 +282,10 @@ export default function Downloads() {
                     </span>
                     <div className="text-right">
                       <div className="font-title-lg text-title-lg font-bold leading-tight">
-                        تحميل مباشر: AN POS Setup 2.4.0.exe
+                        تحميل مباشر: {SITE.downloads.setupFileName}
                       </div>
                       <div className="font-label-sm text-label-sm text-on-secondary/80">
-                        Windows 11 / 10 / 8.1 (64-bit) • مثبت رسمي مباشر
+                        {SITE.downloads.desktopOsFull} • مثبت رسمي مباشر
                       </div>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export default function Downloads() {
                     rel="noopener noreferrer"
                   >
                     <span className="material-symbols-outlined text-[16px]">folder_zip</span>
-                    <span>تحميل النسخة المحمولة (AN POS 2.4.0.exe بدون تثبيت)</span>
+                    <span>تحميل النسخة المحمولة ({SITE.downloads.portableFileName} بدون تثبيت)</span>
                   </a>
                   <a
                     className="hover:text-secondary flex items-center gap-1 transition-colors"
@@ -348,7 +348,7 @@ export default function Downloads() {
                     </div>
                   </div>
                   <span className="font-label-keycap text-label-keycap px-space-sm py-1 rounded-lg bg-surface-container text-on-surface font-bold">
-                    v2.4.0
+                    {SITE.downloads.mobileVersion}
                   </span>
                 </div>
 
@@ -360,7 +360,7 @@ export default function Downloads() {
                   </div>
                   <div>
                     <span className="font-label-keycap text-label-keycap text-on-surface-variant block">حجم الملف</span>
-                    <span className="font-body-md text-body-md text-on-surface font-bold">~28 MB</span>
+                    <span className="font-body-md text-body-md text-on-surface font-bold">~{SITE.downloads.mobileSize}</span>
                   </div>
                   <div>
                     <span className="font-label-keycap text-label-keycap text-on-surface-variant block">المزامنة</span>
@@ -402,7 +402,7 @@ export default function Downloads() {
                     <span className="material-symbols-outlined text-secondary text-[24px]">android</span>
                     <div className="text-right truncate">
                       <div className="font-title-lg text-[15px] font-bold leading-tight">تحميل APK المباشر</div>
-                      <div className="font-label-sm text-label-sm text-on-surface-variant">Android 8.0+ • 28MB</div>
+                      <div className="font-label-sm text-label-sm text-on-surface-variant">{SITE.downloads.mobileOs} • {SITE.downloads.mobileSize}</div>
                     </div>
                   </a>
 
