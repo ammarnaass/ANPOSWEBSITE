@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { DOWNLOAD_PORTABLE_URL, DOWNLOAD_SETUP_URL, WA_ACTIVATE, WA_NUMBER_1 } from '../lib/site'
+import { DOWNLOAD_PORTABLE_URL, DOWNLOAD_SETUP_URL, DOWNLOAD_ANDROID_APK_URL, DOWNLOAD_GOOGLE_PLAY_URL, WA_ACTIVATE, WA_NUMBER_1 } from '../lib/site'
 
 
 interface FaqItem {
@@ -282,7 +282,7 @@ export default function Downloads() {
                     </span>
                     <div className="text-right">
                       <div className="font-title-lg text-title-lg font-bold leading-tight">
-                        تحميل مباشر: AN POS Setup 0.0.0.exe
+                        تحميل مباشر: AN POS Setup 2.4.0.exe
                       </div>
                       <div className="font-label-sm text-label-sm text-on-secondary/80">
                         Windows 11 / 10 / 8.1 (64-bit) • مثبت رسمي مباشر
@@ -303,7 +303,7 @@ export default function Downloads() {
                     rel="noopener noreferrer"
                   >
                     <span className="material-symbols-outlined text-[16px]">folder_zip</span>
-                    <span>تحميل النسخة المحمولة (AN POS 0.0.0.exe بدون تثبيت)</span>
+                    <span>تحميل النسخة المحمولة (AN POS 2.4.0.exe بدون تثبيت)</span>
                   </a>
                   <a
                     className="hover:text-secondary flex items-center gap-1 transition-colors"
@@ -395,8 +395,9 @@ export default function Downloads() {
                   {/* Android APK Button */}
                   <a
                     className="group py-space-md px-space-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-space-xs shadow-sm"
-                    href="/downloads/AN-POS-Mobile.apk"
-                    download
+                    href={DOWNLOAD_ANDROID_APK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span className="material-symbols-outlined text-secondary text-[24px]">android</span>
                     <div className="text-right truncate">
@@ -408,7 +409,7 @@ export default function Downloads() {
                   {/* Google Play / App Store Pill */}
                   <a
                     className="group py-space-md px-space-md rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all flex items-center gap-space-xs shadow-sm"
-                    href="https://play.google.com"
+                    href={DOWNLOAD_GOOGLE_PLAY_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
