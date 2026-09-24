@@ -25,22 +25,22 @@ export const WA_GUIDE = msg('مرحباً، أريد دليل استخدام ا�
 export const SOFTWARE_VERSION = 'v2.4' // الإصدار العام المعروض في الهيدر والبطاقات
 
 // نسخة سطح المكتب (Desktop POS - Windows)
-export const DESKTOP_VERSION = 'v2.4.2'
+export const DESKTOP_VERSION = 'v2.5.0'
 export const DESKTOP_FILE_SIZE = '146.41MB'
 export const DESKTOP_OS = 'Windows 10/11'
 export const DESKTOP_OS_FULL = 'Windows 11 / 10 / 8.1 (64-bit)'
-export const DESKTOP_SETUP_FILENAME = 'AN POS Setup 2.4.0.exe'
-export const DESKTOP_PORTABLE_FILENAME = 'AN POS 2.4.0.exe'
+export const DESKTOP_SETUP_FILENAME = 'AN POS Setup 2.5.0.exe'
+export const DESKTOP_PORTABLE_FILENAME = 'AN POS 2.5.0.exe'
 
 // تطبيق الهاتف المحمول (Mobile POS - Android)
-export const MOBILE_VERSION = 'v2.4.0'
+export const MOBILE_VERSION = 'v2.5.0'
 export const MOBILE_FILE_SIZE = '28 MB'
 export const MOBILE_OS = 'Android 8.0+'
 export const MOBILE_APK_FILENAME = 'AN-POS-Mobile.apk'
 
 // روابط التحميل الرسمية لبرنامج AN POS (نسخ الحاسوب)
-export const DOWNLOAD_SETUP_URL = 'https://download1324.mediafire.com/0439fuzoyi7gryK6_jx8LE2mbT8PctS3hSWXzSrDFKtvMEl0KFZ5NxPCfIhCDAZHDjkrBMyPGvFmXMCouhRRbQv26UmybjBlomrma4mis0G54xbpU7TV9JpWuk1qvZwnziMuTLMCfiuZUMNTI9wp1D6aqcXGLK06q1itbB35kxytWg/6idvqu4gegekr72/AN+POS+Setup+0.0.0.exe'
-export const DOWNLOAD_PORTABLE_URL = 'https://download1347.mediafire.com/cae04jian2vgsFsgrCA0JxLh0N1gFH1eF4sWXgXQdixr31fKnafTWLVtr4471yn-5yKBODhc3AhLIUmYJuFHMhri43A4C9SOr3AKFdbRtiT5qV1dlD3DRDlX39kDAAM4cAbzh1CJZdHAnauGcBPxANcivuutgnchylWe2wC4xRHVWw/jqe7q9gf6mfbu6y/AN+POS+0.0.0.exe'
+export const DOWNLOAD_SETUP_URL = 'https://www.mediafire.com/file/jmov31ppei00cj1/AN+POS+Setup+2.5.0.exe/file'
+export const DOWNLOAD_PORTABLE_URL = 'https://www.mediafire.com/file/pg4sbitocfvlwm8/AN+POS+2.5.0.exe/file'
 
 // روابط تحميل تطبيق الهاتف (Android APK & Google Play)
 export const DOWNLOAD_ANDROID_APK_URL = 'https://download.mediafire.com/anpos/AN-POS-Mobile.apk'
