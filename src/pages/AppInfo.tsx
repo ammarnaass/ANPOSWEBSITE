@@ -126,10 +126,11 @@ export default function AppInfo() {
 
   const changelog = [
     {
-      version: 'v2.4.2 (الحالي)',
+      version: 'v2.5.3 (الحالي)',
       date: 'سبتمبر 2026',
       status: 'إصدار مستقر - Production Stable',
       notes: [
+        'تحديث شامل لمنظومة AN POS وإطلاق الإصدار v2.5.3 مع تحسينات موسعة في الأداء والاستقرار.',
         'اعتماد مركز الدعم والتوزيع الرئيسي في وادي سوف مع التغطية الشاملة لـ 58 ولاية جزائرية.',
         'تسريع زمن قراءة وطباعة الباركود إلى 0.1 ثانية بدقة فائقة.',
         'تخصيص لوحة /app البرمجية لإدارة ومراجعة بيانات النسخ المباشرة ونسخ الإعدادات.',
@@ -138,8 +139,17 @@ export default function AppInfo() {
       ],
     },
     {
-      version: 'v2.4.0',
+      version: 'v2.4.2',
       date: 'أوت 2026',
+      status: 'تحديث استقرار',
+      notes: [
+        'تحسينات عامة على واجهة نقطة البيع ومعالجة المزامنة اللحظية.',
+        'دعم طابعات إضافية وتحسين سرعة استخراج فواتير PDF.',
+      ],
+    },
+    {
+      version: 'v2.4.0',
+      date: 'جويلية 2026',
       status: 'تحديث رئيسي',
       notes: [
         'إطلاق تطبيق الهاتف المحمول المساعد لنظام أندرويد (AN POS Mobile APK).',
@@ -547,7 +557,7 @@ export default function AppInfo() {
               </h2>
             </div>
             <span className="text-xs text-on-surface-variant bg-surface-container px-3 py-1.5 rounded-xl font-mono">
-              Current Branch: release/v2.4
+              Current Branch: release/v2.5.3
             </span>
           </div>
 

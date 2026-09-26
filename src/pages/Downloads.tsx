@@ -60,7 +60,7 @@ export default function Downloads() {
             <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant shadow-sm">
               <span className="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
               <span className="font-label-sm text-label-sm font-semibold text-on-surface">
-                تحميل فوري وآمن • الإصدار 2.4 المستقر (DZ Build)
+                تحميل فوري وآمن • الإصدار {SITE.version.replace(/^v/, '')} المستقر (DZ Build)
               </span>
             </div>
 
