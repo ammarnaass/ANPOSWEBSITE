@@ -82,39 +82,39 @@ export default function Pricing() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Hero Section */}
-      <section className="relative w-full overflow-hidden bg-surface py-space-xl lg:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container shadow-sm mb-space-md">
-            <span className="w-2 h-2 rounded-full bg-secondary" />
-            <span className="font-label-keycap text-label-keycap text-secondary font-bold uppercase">
-              تسعير عادل وشفاف • ترخيص دائم مدى الحياة • أسعار الشراكة
+      <section className="relative w-full overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/50 py-12 lg:py-20 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel shadow-sm mb-4 border border-blue-200">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-xs font-bold text-slate-800 uppercase">
+              تسعير عادل وشفاف • ترخيص دائم مدى الحياة • بدون رسوم شهرية
             </span>
           </div>
 
-          <h1 className="font-display-total text-display-total lg:text-5xl text-on-surface tracking-tight max-w-4xl leading-tight mb-space-md">
+          <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-slate-950 tracking-tight max-w-4xl leading-[1.2] mb-4">
             استثمار بسيط لمرة واحدة... <br className="hidden md:inline" />
-            <span className="text-secondary">أرباح وتنظيم مستقر</span> يدوم معك مدى الحياة
+            <span className="gradient-text">أرباح وتنظيم مستقر</span> يدوم معك مدى الحياة
           </h1>
 
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed mb-space-xl">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
             ابدأ الآن بتجربة كاملة الصلاحيات لمدة 7 أيام دون أي قيود، ثم فعّل نسختك الدائمة متى شئت بمبلغ{' '}
-            <span className="font-headline-md text-headline-md text-on-surface font-bold">15,000 دج</span>{' '}
+            <span className="font-bold text-slate-900 font-mono">15,000 دج</span>{' '}
             فقط دفعة واحدة، دون تجديدات شهرية أو رسوم سنوية مستترة.
           </p>
 
           {/* Trust Indicators Ribbon */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-md w-full max-w-2xl bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
-            <div className="flex items-center justify-center gap-space-xs text-on-surface">
-              <span className="material-symbols-outlined text-[20px] text-on-tertiary-container">credit_card_off</span>
-              <span className="font-body-md text-body-md font-semibold">بدون بطاقة دفع مسبقة</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl glass-panel p-4 rounded-2xl shadow-sm border border-slate-200">
+            <div className="flex items-center justify-center gap-2 text-slate-800">
+              <span className="material-symbols-outlined text-[20px] text-emerald-600">credit_card_off</span>
+              <span className="text-xs sm:text-sm font-bold">بدون بطاقة دفع مسبقة</span>
             </div>
-            <div className="flex items-center justify-center gap-space-xs text-on-surface">
-              <span className="material-symbols-outlined text-[20px] text-secondary">all_inclusive</span>
-              <span className="font-body-md text-body-md font-semibold">رخصة نهائية غير منتهية</span>
+            <div className="flex items-center justify-center gap-2 text-slate-800">
+              <span className="material-symbols-outlined text-[20px] text-blue-600">all_inclusive</span>
+              <span className="text-xs sm:text-sm font-bold">رخصة نهائية غير منتهية</span>
             </div>
-            <div className="flex items-center justify-center gap-space-xs text-on-surface">
-              <span className="material-symbols-outlined text-[20px] text-on-tertiary-container">cloud_off</span>
-              <span className="font-body-md text-body-md font-semibold">يعمل 100% بدون إنترنت</span>
+            <div className="flex items-center justify-center gap-2 text-slate-800">
+              <span className="material-symbols-outlined text-[20px] text-emerald-600">cloud_off</span>
+              <span className="text-xs sm:text-sm font-bold">يعمل 100% بدون إنترنت</span>
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function Pricing() {
               {/* Action buttons */}
               <div className="space-y-space-sm">
                 <a
-                  className="w-full flex items-center justify-between bg-tertiary-container text-on-tertiary-container hover:bg-tertiary-container/90 px-space-md py-space-md rounded-xl font-body-lg text-body-lg font-bold shadow-md transition-all active:scale-[0.98]"
+                  className="btn-shimmer w-full flex items-center justify-between bg-emerald-600 hover:bg-emerald-700 text-white px-space-md py-space-md rounded-xl font-body-lg text-body-lg font-bold shadow-md transition-all active:scale-[0.98]"
                   href={WA_ACTIVATE}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -275,7 +275,7 @@ export default function Pricing() {
                     <span className="material-symbols-outlined text-[22px]">chat</span>
                     <span>تفعيل فوري عبر واتساب</span>
                   </div>
-                  <span className="font-label-keycap text-label-keycap bg-surface-container-lowest/20 px-space-xs py-0.5 rounded text-on-tertiary-container">
+                  <span className="font-mono text-xs bg-white/20 px-2 py-0.5 rounded text-white font-bold">
                     15,000 دج
                   </span>
                 </a>

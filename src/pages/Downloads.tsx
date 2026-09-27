@@ -53,37 +53,37 @@ export default function Downloads() {
       </div>
 
       {/* 2. Hero Section */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-b from-surface via-surface-container-low to-surface py-space-xl lg:py-24 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-          <div className="lg:col-span-7 flex flex-col items-start gap-space-md">
+      <section className="relative w-full overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/50 py-12 lg:py-20 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7 flex flex-col items-start gap-4">
             {/* Semantic Badge */}
-            <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-slate-700 shadow-sm border border-slate-200">
               <span className="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
-              <span className="font-label-sm text-label-sm font-semibold text-on-surface">
-                تحميل فوري وآمن • الإصدار {SITE.version.replace(/^v/, '')} المستقر (DZ Build)
+              <span className="text-xs sm:text-sm font-semibold text-slate-800">
+                تحميل رسمي مباشر وآمن • الإصدار {SITE.version.replace(/^v/, '')} المستقر (DZ Build)
               </span>
             </div>
 
             {/* Main Title */}
-            <h1 className="font-headline-lg text-headline-lg lg:text-[44px] lg:leading-[54px] font-bold text-on-surface">
-              حمّل تطبيق <span className="text-secondary">AN POS</span> وابدأ إدارة متجرك اليوم
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-slate-950 tracking-tight leading-[1.2]">
+              حمّل تطبيق <span className="gradient-text">AN POS</span> وابدأ إدارة متجرك اليوم
             </h1>
 
             {/* Subtitle */}
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
               نزّل النسخة المناسبة لجهازك خلال ثوانٍ. عند التثبيت، تبدأ تجربتك المجانية الكاملة لمدة 7 أيام تلقائياً لجميع المميزات وبدون أي دفع مسبق أو إدخال بطاقة بنكية.
             </p>
 
             {/* Trust Callout Card */}
-            <div className="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
-              <div className="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-tertiary-fixed text-[26px]">lock_open</span>
+            <div className="w-full glass-panel rounded-2xl p-4 shadow-sm flex items-center gap-4 border border-blue-100">
+              <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20">
+                <span className="material-symbols-outlined text-[24px]">lock_open</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-title-lg text-title-lg text-on-surface font-bold">
+                <span className="text-sm sm:text-base text-slate-900 font-bold">
                   التحميل = تفعيل تجربة مجانية شاملة 7 أيام مباشرة
                 </span>
-                <span className="font-body-md text-body-md text-on-surface-variant">
+                <span className="text-xs sm:text-sm text-slate-500">
                   صلاحيات غير محدودة لإدارة المخزون، الكاشير، الفواتير، والطباعة دون أي التزام مالي مسبق.
                 </span>
               </div>
@@ -271,7 +271,7 @@ export default function Downloads() {
               {/* Actions & Download Area */}
               <div className="mt-space-lg pt-space-md flex flex-col gap-space-sm">
                 <a
-                  className="group w-full py-space-md px-space-lg rounded-xl bg-secondary text-on-secondary hover:bg-secondary-container transition-all flex items-center justify-between shadow-md"
+                  className="btn-shimmer group w-full py-space-md px-space-lg rounded-xl bg-secondary text-on-secondary hover:bg-blue-700 transition-all flex items-center justify-between shadow-md"
                   href={DOWNLOAD_SETUP_URL}
                   target="_blank"
                   rel="noopener noreferrer"

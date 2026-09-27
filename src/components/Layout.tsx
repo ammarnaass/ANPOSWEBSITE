@@ -17,7 +17,7 @@ export default function Layout() {
         تجاوز إلى المحتوى الرئيسي
       </a>
       <Header />
-      <main id="main-content" className="min-h-[calc(100vh-80px)] w-full flex-1 pt-20 bg-surface">
+      <main id="main-content" className="min-h-[calc(100vh-80px)] w-full flex-1 pt-20 sm:pt-26 bg-surface relative">
         <Outlet />
       </main>
       <Footer />
