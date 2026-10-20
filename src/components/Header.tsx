@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Download, Menu, UserRound, X } from 'lucide-react'
 import { SITE } from '../lib/site'
-
 
 export interface NavLinkItem {
   to: string
@@ -13,8 +12,8 @@ export const links: NavLinkItem[] = [
   { to: '/', label: 'الرئيسية' },
   { to: '/features', label: 'المميزات' },
   { to: '/downloads', label: 'التحميل' },
-  { to: '/pricing', label: 'التسعير والتفعيل' },
-  { to: '/support', label: 'الدعم والأسئلة' },
+  { to: '/pricing', label: 'التسعير' },
+  { to: '/support', label: 'الدعم' },
   { to: '/contact', label: 'تواصل معنا' },
 ]
 
@@ -22,139 +21,123 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 sm:top-3 inset-x-0 z-50 px-2 sm:px-6 transition-all duration-300">
-      <div className="max-w-7xl mx-auto rounded-2xl glass-panel px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between gap-3 shadow-[0_4px_24px_-4px_rgba(15,23,42,0.08)] border border-slate-200/80">
+    <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-6 sm:pt-3">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 rounded-2xl border border-slate-200/80 bg-white/85 px-3 shadow-[0_4px_24px_-8px_rgba(15,23,42,0.12)] backdrop-blur-xl sm:h-18 sm:px-5">
         {/* Brand */}
-        <div className="flex items-center gap-2.5 sm:gap-4">
-          <Link to="/" className="flex items-center gap-2.5 group" aria-label="AN POS — الرئيسية">
-            <div className="relative">
-              <img 
-                src="/logo.png" 
-                alt="شعار AN POS" 
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-contain shadow-sm shrink-0 transition-transform group-hover:scale-105" 
-              />
-              <span className="absolute -top-1 -end-1 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-white ring-1 ring-emerald-500/30" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-headline-md text-headline-md font-bold tracking-tight text-on-surface group-hover:text-secondary transition-colors">
-                AN POS
-              </span>
-              <span className="text-[10px] text-on-surface-variant font-medium -mt-1 hidden sm:block">
-                نظام نقاط البيع الحديث
-              </span>
-            </div>
-          </Link>
-          <Link
-            to="/app"
-            title="معلومات وإصدارات البرنامج (/app)"
-            className="hidden lg:inline-flex items-center gap-1.5 font-label-keycap text-label-keycap px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200/80 text-slate-700 transition-colors border border-slate-200/60"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span>النسخة {SITE.version}</span>
-            <span className="text-secondary font-bold">DZ</span>
-          </Link>
-        </div>
+        <Link to="/" className="group flex shrink-0 items-center gap-2.5" aria-label="AN POS — الرئيسية">
+          <span className="relative">
+            <img
+              src="/logo.png"
+              alt="شعار AN POS"
+              className="h-9 w-9 rounded-xl object-contain shadow-sm transition-transform group-hover:scale-105 sm:h-10 sm:w-10"
+            />
+            <span className="absolute -end-1 -top-1 h-2.5 w-2.5 rounded-full border-2 border-white bg-emerald-500" />
+          </span>
+          <span className="flex flex-col leading-tight">
+            <span className="text-lg font-extrabold text-slate-900">AN POS</span>
+            <span className="hidden text-[10px] font-medium text-slate-500 sm:block">نظام نقاط البيع</span>
+          </span>
+        </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden xl:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-xl border border-slate-200/50" aria-label="التنقل الرئيسي">
-          {links.map((l) => (
+        {/* Desktop nav */}
+        <nav
+          className="hidden items-center gap-0.5 rounded-xl border border-slate-200/60 bg-slate-100/70 p-1 xl:flex"
+          aria-label="التنقل الرئيسي"
+        >
+          {links.map((link) => (
             <NavLink
-              key={l.to}
-              to={l.to}
-              end={l.to === '/'}
+              key={link.to}
+              to={link.to}
+              end={link.to === '/'}
               className={({ isActive }) =>
-                `font-body-md text-sm px-3.5 py-1.5 transition-all rounded-lg ${
+                `rounded-lg px-3.5 py-1.5 text-sm transition-colors ${
                   isActive
-                    ? 'bg-white text-secondary font-bold shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-white/50 font-medium'
+                    ? 'bg-white font-bold text-secondary shadow-sm'
+                    : 'font-medium text-slate-600 hover:text-slate-900'
                 }`
               }
             >
-              {l.label}
+              {link.label}
             </NavLink>
           ))}
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <Link
             to="/downloads"
-            className="btn-shimmer font-body-md text-sm px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-secondary hover:bg-blue-700 text-white font-bold transition-all flex items-center gap-2 shadow-[0_2px_10px_rgba(37,99,235,0.25)] hover:shadow-[0_4px_16px_rgba(37,99,235,0.35)] active:translate-y-0.5 whitespace-nowrap shrink-0"
+            className="btn-shimmer inline-flex min-h-10 items-center gap-2 rounded-xl bg-secondary px-3 py-2 text-sm font-bold text-white shadow-[0_2px_10px_rgba(37,99,235,0.25)] transition-all hover:bg-blue-700 active:translate-y-px sm:px-4"
           >
-            <span className="material-symbols-outlined text-[18px]">download</span>
-            <span className="hidden sm:inline">تحميل مجاني (7 أيام)</span>
-            <span className="sm:hidden text-xs font-bold">تحميل مجاني</span>
-            <span className="hidden sm:inline-block font-mono text-[10px] bg-white/20 px-1.5 py-0.5 rounded font-semibold">
-              F12
-            </span>
+            <Download className="h-4 w-4" aria-hidden="true" />
+            <span className="hidden sm:inline">تحميل مجاني</span>
+            <span className="sm:hidden">تحميل</span>
           </Link>
 
           <Link
             to="/client"
             aria-label="بوابة العميل"
             title="بوابة العميل"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center text-slate-700 hover:text-secondary transition-colors"
+            className="hidden h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 transition-colors hover:bg-slate-50 hover:text-secondary sm:flex"
           >
-            <span className="material-symbols-outlined text-[20px]">person</span>
+            <UserRound className="h-4.5 w-4.5" aria-hidden="true" />
           </Link>
 
-          {/* Mobile menu button */}
           <button
-            className="p-2 text-slate-700 xl:hidden rounded-xl hover:bg-slate-100 transition-colors"
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-slate-700 transition-colors hover:bg-slate-100 xl:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'إغلاق القائمة' : 'فتح القائمة'}
           >
-            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile nav */}
       {open && (
         <nav
           id="mobile-nav"
-          className="mt-2 max-w-7xl mx-auto rounded-2xl glass-panel p-4 xl:hidden shadow-xl border border-slate-200/80 animate-in fade-in slide-in-from-top-2 duration-200"
+          className="mx-auto mt-2 max-w-6xl rounded-2xl border border-slate-200/80 bg-white/95 p-3 shadow-xl backdrop-blur-xl xl:hidden"
           aria-label="قائمة الجوال"
         >
-          <div className="flex flex-col gap-1.5">
-            {links.map((l) => (
+          <div className="flex flex-col gap-1">
+            {links.map((link) => (
               <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.to === '/'}
+                key={link.to}
+                to={link.to}
+                end={link.to === '/'}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ${
+                  `rounded-xl px-4 py-2.5 text-sm transition-colors ${
                     isActive
-                      ? 'bg-secondary text-white shadow-sm'
-                      : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
+                      ? 'bg-blue-50 font-bold text-secondary'
+                      : 'font-semibold text-slate-700 hover:bg-slate-50'
                   }`
                 }
               >
-                {l.label}
+                {link.label}
               </NavLink>
             ))}
-            <div className="pt-2 mt-1 border-t border-slate-200/80 flex items-center justify-between">
-              <NavLink
-                to="/app"
-                onClick={() => setOpen(false)}
-                className="text-xs font-semibold text-secondary hover:underline flex items-center gap-1.5 py-1 px-2"
-              >
-                <span>📦 معلومات وإصدارات البرنامج</span>
-                <span className="font-mono bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-[10px]">
-                  {SITE.version}
-                </span>
-              </NavLink>
-              <Link
-                to="/downloads"
-                onClick={() => setOpen(false)}
-                className="text-xs font-bold text-white bg-secondary px-3 py-1.5 rounded-lg flex items-center gap-1"
-              >
-                <span>حمّل الآن</span>
-              </Link>
-            </div>
+          </div>
+
+          <div className="mt-2 flex items-center justify-between border-t border-slate-100 pt-3">
+            <Link
+              to="/client"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-semibold text-slate-600 hover:text-secondary"
+            >
+              <UserRound className="h-3.5 w-3.5" aria-hidden="true" />
+              بوابة العميل
+            </Link>
+            <Link
+              to="/app"
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-2 py-1.5 font-mono text-[11px] font-semibold text-slate-500 hover:text-secondary"
+            >
+              {SITE.version}
+            </Link>
           </div>
         </nav>
       )}

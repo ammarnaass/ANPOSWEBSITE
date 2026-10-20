@@ -1,91 +1,69 @@
 import { useState } from 'react'
+import { MessageCircle, Send, X } from 'lucide-react'
 import { SITE, WA_LINK_1, WA_LINK_2 } from '../lib/site'
 
 export default function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="fixed bottom-4 start-4 sm:bottom-6 sm:start-6 z-40">
-      {/* Expanded popup */}
+    <div className="fixed bottom-4 start-4 z-40 sm:bottom-6 sm:start-6">
       {isOpen && (
-        <div className="mb-3 w-[calc(100vw-2rem)] sm:w-80 max-w-sm rounded-2xl bg-surface-container-lowest p-4 shadow-[0_8px_30px_rgba(0,0,0,0.15)] border border-surface-container animate-fade-in text-on-surface">
-          <div className="flex items-center justify-between pb-3 border-b border-surface-container-low">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
-                <span className="material-symbols-outlined text-[18px]">support_agent</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-title-lg text-title-lg text-on-surface leading-tight font-bold">محادثة واتساب فورية</span>
-                <span className="font-label-sm text-label-sm text-on-tertiary-container font-semibold">فريق الدعم متصل الآن</span>
-              </div>
+        <div className="mb-3 w-[calc(100vw-2rem)] max-w-sm rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
+          <div className="flex items-start justify-between gap-3 border-b border-slate-100 pb-3">
+            <div>
+              <p className="text-sm font-bold text-slate-900">محادثة واتساب</p>
+              <p className="mt-0.5 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                فريق الدعم متصل الآن
+              </p>
             </div>
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="text-on-surface-variant hover:text-on-surface p-1 rounded-lg"
-              aria-label="إغلاق"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-100"
+              aria-label="إغلاق المحادثة"
             >
-              <span className="material-symbols-outlined text-[20px]">close</span>
+              <X className="h-4 w-4" aria-hidden="true" />
             </button>
           </div>
 
-          <p className="font-label-sm text-label-sm text-on-surface-variant mt-2 mb-3 leading-relaxed">
-            {SITE.waDescription}
-          </p>
+          <p className="mt-3 text-xs leading-5 text-slate-500">{SITE.waDescription}</p>
 
-          <div className="flex flex-col gap-2">
-            <a
-              href={WA_LINK_1}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group"
-            >
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-on-tertiary-container text-[20px]">chat</span>
-                <div className="flex flex-col">
-                  <span className="font-body-md text-body-md font-bold text-on-surface">واتساب (1)</span>
-                  <span className="font-label-sm text-label-sm text-on-surface-variant" dir="ltr">{SITE.phone1}</span>
-                </div>
-              </div>
-              <span className="font-label-keycap text-label-keycap px-2 py-0.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed group-hover:scale-105 transition-transform">
-                فتح المحادثة
-              </span>
-            </a>
-
-            <a
-              href={WA_LINK_2}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group"
-            >
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-on-tertiary-container text-[20px]">chat</span>
-                <div className="flex flex-col">
-                  <span className="font-body-md text-body-md font-bold text-on-surface">واتساب (2)</span>
-                  <span className="font-label-sm text-label-sm text-on-surface-variant" dir="ltr">{SITE.phone2}</span>
-                </div>
-              </div>
-              <span className="font-label-keycap text-label-keycap px-2 py-0.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed group-hover:scale-105 transition-transform">
-                فتح المحادثة
-              </span>
-            </a>
+          <div className="mt-3 flex flex-col gap-2">
+            {[
+              { href: WA_LINK_1, phone: SITE.phone1, label: 'واتساب (1)' },
+              { href: WA_LINK_2, phone: SITE.phone2, label: 'واتساب (2)' },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-11 items-center justify-between rounded-xl border border-slate-200 px-3 py-2 transition-colors hover:border-emerald-200 hover:bg-emerald-50/60"
+              >
+                <span className="flex items-center gap-2.5">
+                  <MessageCircle className="h-4 w-4 text-emerald-600" aria-hidden="true" />
+                  <span className="flex flex-col leading-tight">
+                    <span className="text-xs font-bold text-slate-900">{item.label}</span>
+                    <span className="font-mono text-[11px] text-slate-500" dir="ltr">{item.phone}</span>
+                  </span>
+                </span>
+                <Send className="h-4 w-4 text-slate-400" aria-hidden="true" />
+              </a>
+            ))}
           </div>
         </div>
       )}
 
-      {/* Main Pill trigger */}
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="group flex items-center gap-2 sm:gap-space-sm bg-tertiary-container text-on-tertiary-container px-3.5 py-2.5 sm:px-space-lg sm:py-space-md rounded-full shadow-[0_4px_16px_rgba(0,33,20,0.2)] hover:scale-105 transition-all cursor-pointer"
+        className="flex h-12 w-12 items-center justify-center gap-2 rounded-full bg-emerald-600 text-white shadow-lg shadow-emerald-900/20 transition-transform hover:scale-[1.03] active:scale-100 sm:h-auto sm:w-auto sm:px-4 sm:py-3"
         aria-label="محادثة واتساب فورية"
+        aria-expanded={isOpen}
       >
-        <span className="material-symbols-outlined text-on-tertiary-container text-[20px] sm:text-[24px]">chat</span>
-        <span className="font-body-md text-xs sm:text-body-md font-bold sm:font-semibold text-on-tertiary-container">
-          <span className="sm:hidden">واتساب</span>
-          <span className="hidden sm:inline">محادثة واتساب فورية</span>
-        </span>
-        <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-tertiary-fixed animate-pulse" />
+        <MessageCircle className="h-5 w-5" aria-hidden="true" />
+        <span className="hidden text-xs font-bold sm:inline">واتساب</span>
       </button>
     </div>
   )

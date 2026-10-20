@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Icon from '../components/ui/Icon'
 
+import PageHero from '../components/PageHero'
 import { SITE, WA_NUMBER_1 } from '../lib/site'
 
 interface FaqItem {
@@ -133,88 +134,61 @@ export default function Support() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* Top Ambient Glow */}
-      <div className="relative w-full overflow-hidden">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-96 bg-gradient-to-b from-primary-fixed/40 via-surface-variant/30 to-transparent blur-3xl pointer-events-none -z-10"></div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-16">
-          {/* Top Breadcrumb & Status Badge */}
-          <div className="flex flex-wrap items-center justify-between gap-space-md mb-8">
-            <div className="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface">
-              <span className="w-2 h-2 rounded-full bg-on-tertiary-container animate-ping"></span>
-              <span className="w-2 h-2 rounded-full bg-on-tertiary-container -mr-3"></span>
-              <span className="font-label-sm text-label-sm font-semibold">مركز الدعم والمساعدة الفنية • إجابات وحلول سريعة</span>
-            </div>
-            <div className="hidden sm:flex items-center gap-space-sm text-on-surface-variant">
-              <Icon name="location_on" size={18} className="text-secondary" />
-              <span className="font-label-keycap text-label-keycap">{SITE.location} • تغطية 58 ولاية</span>
-            </div>
+      <PageHero
+        eyebrow="مركز الدعم والمساعدة الفنية"
+        title={
+          <>
+            كيف يمكننا مساعدتك <span className="gradient-text">اليوم؟</span>
+          </>
+        }
+        description="تصفح أدلة الاستخدام وحلول المشاكل الشائعة، أو تواصل مع فريق الدعم لمساعدتك عن بعد في ربط أجهزتك وضبط نقطة البيع."
+      >
+        <div className="mx-auto mt-8 w-full max-w-2xl">
+          <div className="flex items-center gap-2 rounded-2xl border border-slate-200 bg-white p-2 shadow-sm transition-shadow focus-within:border-blue-300 focus-within:shadow-[0_8px_30px_rgba(37,99,235,0.12)]">
+            <Icon name="search" size={22} className="ms-2 shrink-0 text-slate-400" />
+            <label className="sr-only" htmlFor="faqSearchInput">ابحث في الأسئلة الشائعة</label>
+            <input
+              className="w-full bg-transparent px-2 py-2.5 text-sm text-slate-900 outline-none placeholder:text-slate-400"
+              id="faqSearchInput"
+              placeholder="ابحث عن سؤال، كود تفعيل، إعداد طابعة..."
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button
+              type="button"
+              className="hidden min-h-10 shrink-0 items-center gap-1.5 rounded-xl bg-secondary px-4 text-sm font-bold text-white transition-colors hover:bg-blue-700 sm:inline-flex"
+              onClick={() => {
+                const el = document.getElementById('faqList')
+                el?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
+              بحث
+            </button>
           </div>
 
-          {/* Main Header Section */}
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <h1 className="font-headline-lg text-headline-lg sm:text-[38px] sm:leading-[46px] text-on-surface tracking-tight">
-              كيف يمكننا مساعدتك اليوم؟
-            </h1>
-            <p className="mt-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              تصفح أدلة الاستخدام المصورة، حلول المشاكل الشائعة، أو تواصل فوراً مع فريق الدعم الفني لمساعدتك عن بعد في ربط أجهزتك وضبط نقطة البيع.
-            </p>
-
-            {/* Big Search Interface */}
-            <div className="w-full mt-8">
-              <div className="relative flex items-center bg-surface-container-lowest rounded-full p-2 shadow-[0_4px_24px_rgba(11,28,48,0.08)] transition-all focus-within:shadow-[0_8px_30px_rgba(0,81,213,0.14)]">
-                <Icon name="search" size={24} className="text-on-surface-variant mr-3 ms-2" />
-                <input
-                  className="w-full bg-transparent px-3 py-3 font-body-lg text-body-lg text-on-surface placeholder:text-outline outline-none"
-                  id="faqSearchInput"
-                  placeholder="ابحث عن سؤال، كود تفعيل، إعداد طابعة، أو حل مشكلة..."
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <button
-                  type="button"
-                  className="hidden sm:inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary text-on-primary font-body-md text-body-md hover:bg-primary-container transition-all"
-                  onClick={() => {
-                    const el = document.getElementById('faqList')
-                    el?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                >
-                  <span>بحث</span>
-                  <span className="font-label-keycap text-label-keycap opacity-75">↵</span>
-                </button>
-              </div>
-
-              {/* Quick Tag Pills */}
-              <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
-                <span className="font-label-sm text-label-sm text-on-surface-variant ml-1">الأكثر بحثاً:</span>
-                {[
-                  'ربط الطابعة الحرارية',
-                  'تفعيل بعد 7 أيام',
-                  'بريدي موب BaridiMob',
-                  'AnyDesk عن بعد',
-                  'نقل الترخيص',
-                ].map((tag) => (
-                  <button
-                    key={tag}
-                    type="button"
-                    className="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"
-                    onClick={() => {
-                      setSearchQuery(tag)
-                      const el = document.getElementById('faqList')
-                      el?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                    }}
-                  >
-                    {tag}
-                  </button>
-                ))}
-              </div>
-            </div>
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+            <span className="text-[11px] text-slate-500">الأكثر بحثاً:</span>
+            {['ربط الطابعة الحرارية', 'تفعيل بعد 7 أيام', 'بريدي موب BaridiMob', 'AnyDesk عن بعد', 'نقل الترخيص'].map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-medium text-slate-600 transition-colors hover:border-blue-200 hover:text-secondary"
+                onClick={() => {
+                  setSearchQuery(tag)
+                  const el = document.getElementById('faqList')
+                  el?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                }}
+              >
+                {tag}
+              </button>
+            ))}
           </div>
         </div>
-      </div>
+      </PageHero>
 
       {/* Support Channels Quick Cards */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full mb-16">
+      <div className="mx-auto w-full max-w-6xl px-4 pt-12 pb-16 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: AnyDesk */}
           <div className="flex flex-col justify-between bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-[0_2px_12px_rgba(11,28,48,0.04)] hover:shadow-[0_8px_24px_rgba(11,28,48,0.08)] transition-all group">
@@ -233,7 +207,7 @@ export default function Support() {
             </div>
             <div>
               <a
-                className="w-full inline-flex items-center justify-center gap-space-sm px-5 py-3.5 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-primary-container transition-all active:translate-y-0.5"
+                className="w-full inline-flex items-center justify-center gap-space-sm px-5 py-3.5 rounded-xl bg-secondary text-white font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-blue-700 transition-all active:translate-y-0.5"
                 href="#quick-ticket"
               >
                 <Icon name="screen_share" size={20} />
@@ -263,7 +237,7 @@ export default function Support() {
             </div>
             <div className="flex flex-col gap-2">
               <a
-                className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-primary text-on-primary font-body-md text-body-md shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-primary-container transition-all active:translate-y-0.5"
+                className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-secondary text-white font-body-md text-body-md shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-blue-700 transition-all active:translate-y-0.5"
                 href={SITE.wa1}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -332,7 +306,7 @@ export default function Support() {
 
       {/* Guided Troubleshooting & Setup Guides (Visual Bento) */}
       <div className="w-full bg-surface-container-low/70 py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
               <div className="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface mb-2">
@@ -530,7 +504,7 @@ export default function Support() {
       </div>
 
       {/* Detailed FAQ Section */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full py-16">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 w-full py-16">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container text-on-surface mb-2">
             <Icon name="help" size={16} className="text-secondary" />
@@ -546,7 +520,7 @@ export default function Support() {
             type="button"
             className={`faq-tab px-4 py-2 rounded-xl font-body-md text-body-md transition-all ${
               activeCategory === 'all'
-                ? 'bg-primary text-on-primary font-semibold'
+                ? 'bg-secondary text-white font-semibold'
                 : 'bg-surface-container text-on-surface hover:bg-surface-container-high'
             }`}
             onClick={() => setActiveCategory('all')}
@@ -557,7 +531,7 @@ export default function Support() {
             type="button"
             className={`faq-tab px-4 py-2 rounded-xl font-body-md text-body-md transition-all ${
               activeCategory === 'pricing'
-                ? 'bg-primary text-on-primary font-semibold'
+                ? 'bg-secondary text-white font-semibold'
                 : 'bg-surface-container text-on-surface hover:bg-surface-container-high'
             }`}
             onClick={() => setActiveCategory('pricing')}
@@ -568,7 +542,7 @@ export default function Support() {
             type="button"
             className={`faq-tab px-4 py-2 rounded-xl font-body-md text-body-md transition-all ${
               activeCategory === 'hardware'
-                ? 'bg-primary text-on-primary font-semibold'
+                ? 'bg-secondary text-white font-semibold'
                 : 'bg-surface-container text-on-surface hover:bg-surface-container-high'
             }`}
             onClick={() => setActiveCategory('hardware')}
@@ -579,7 +553,7 @@ export default function Support() {
             type="button"
             className={`faq-tab px-4 py-2 rounded-xl font-body-md text-body-md transition-all ${
               activeCategory === 'data'
-                ? 'bg-primary text-on-primary font-semibold'
+                ? 'bg-secondary text-white font-semibold'
                 : 'bg-surface-container text-on-surface hover:bg-surface-container-high'
             }`}
             onClick={() => setActiveCategory('data')}
@@ -756,7 +730,7 @@ export default function Support() {
               {/* Submit Button */}
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <button
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-8 py-3.5 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-primary-container transition-all active:translate-y-0.5"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-8 py-3.5 rounded-xl bg-secondary text-white font-body-lg text-body-lg shadow-[0_2px_4px_rgba(14,26,47,0.08)] hover:bg-blue-700 transition-all active:translate-y-0.5"
                   type="submit"
                 >
                   <Icon name="send" size={20} />
@@ -773,8 +747,8 @@ export default function Support() {
       </div>
 
       {/* Trust & Warranty Guarantee Banner */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full py-12">
-        <div className="rounded-2xl bg-primary text-on-primary p-8 lg:p-12 relative overflow-hidden shadow-lg">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 w-full py-12">
+        <div className="rounded-2xl bg-secondary text-white p-8 lg:p-12 relative overflow-hidden shadow-lg">
           <div className="absolute -end-16 -top-16 w-64 h-64 rounded-full bg-secondary-container/20 blur-2xl"></div>
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-start gap-4">

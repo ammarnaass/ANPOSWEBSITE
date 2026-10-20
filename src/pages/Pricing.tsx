@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CreditCard, Download, Infinity, MessageCircle, WifiOff } from 'lucide-react'
+import PageHero from '../components/PageHero'
 import { SITE, WA_ACTIVATE, WA_NUMBER_1 } from '../lib/site'
 
 interface FaqItem {
@@ -68,7 +70,7 @@ export default function Pricing() {
     }
     if (val.length >= 12) {
       setDemoStatus({
-        text: '✓ كود مطابق لصيغة رخصة AN POS الأصلية! قم بنسخه ولصقه داخل البرنامج لتثبيته نهائياً.',
+        text: 'كود مطابق لصيغة رخصة AN POS الأصلية! قم بنسخه ولصقه داخل البرنامج لتثبيته نهائياً.',
         color: 'text-on-tertiary-container font-semibold',
       })
     } else {
@@ -82,61 +84,59 @@ export default function Pricing() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Hero Section */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/50 py-12 lg:py-20 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel shadow-sm mb-4 border border-blue-200">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-bold text-slate-800 uppercase">
-              تسعير عادل وشفاف • ترخيص دائم مدى الحياة • بدون رسوم شهرية
-            </span>
+      <PageHero
+        eyebrow="تسعير واضح • ترخيص دائم • بدون رسوم شهرية"
+        title={
+          <>
+            استثمار بسيط لمرة واحدة، <span className="gradient-text">وتنظيم يدوم</span>
+          </>
+        }
+        description={
+          <>
+            ابدأ بتجربة كاملة الصلاحيات لمدة {SITE.trialDays} أيام دون قيود، ثم فعّل نسختك الدائمة متى شئت
+            بمبلغ <span className="font-mono font-bold text-slate-900">{SITE.price}</span> دفعة واحدة فقط.
+          </>
+        }
+        actions={[
+          { label: 'ابدأ التجربة المجانية', to: '/downloads', icon: Download, variant: 'primary' },
+          { label: 'تفعيل عبر واتساب', href: WA_ACTIVATE, icon: MessageCircle, variant: 'ghost' },
+        ]}
+        meta={
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-2 sm:grid-cols-3">
+            {[
+              { icon: CreditCard, label: 'بدون بطاقة دفع مسبقة' },
+              { icon: Infinity, label: 'رخصة غير منتهية' },
+              { icon: WifiOff, label: 'يعمل 100% بدون إنترنت' },
+            ].map((item) => (
+              <span
+                key={item.label}
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700"
+              >
+                <item.icon className="h-4 w-4 text-emerald-600" aria-hidden="true" />
+                {item.label}
+              </span>
+            ))}
           </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-slate-950 tracking-tight max-w-4xl leading-[1.2] mb-4">
-            استثمار بسيط لمرة واحدة... <br className="hidden md:inline" />
-            <span className="gradient-text">أرباح وتنظيم مستقر</span> يدوم معك مدى الحياة
-          </h1>
-
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            ابدأ الآن بتجربة كاملة الصلاحيات لمدة 7 أيام دون أي قيود، ثم فعّل نسختك الدائمة متى شئت بمبلغ{' '}
-            <span className="font-bold text-slate-900 font-mono">15,000 دج</span>{' '}
-            فقط دفعة واحدة، دون تجديدات شهرية أو رسوم سنوية مستترة.
-          </p>
-
-          {/* Trust Indicators Ribbon */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl glass-panel p-4 rounded-2xl shadow-sm border border-slate-200">
-            <div className="flex items-center justify-center gap-2 text-slate-800">
-              <span className="material-symbols-outlined text-[20px] text-emerald-600">credit_card_off</span>
-              <span className="text-xs sm:text-sm font-bold">بدون بطاقة دفع مسبقة</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 text-slate-800">
-              <span className="material-symbols-outlined text-[20px] text-blue-600">all_inclusive</span>
-              <span className="text-xs sm:text-sm font-bold">رخصة نهائية غير منتهية</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 text-slate-800">
-              <span className="material-symbols-outlined text-[20px] text-emerald-600">cloud_off</span>
-              <span className="text-xs sm:text-sm font-bold">يعمل 100% بدون إنترنت</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* 2. Main Pricing Card Showcase Section */}
-      <div className="max-w-5xl mx-auto px-6 lg:px-12 -mt-8 relative z-20 w-full mb-space-xl">
-        <div className="bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden">
+      <div className="relative z-20 mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 sm:py-12">
+        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_50px_-24px_rgba(15,23,42,0.35)]">
           {/* High Badge Top Bar */}
-          <div className="bg-primary text-on-primary px-space-lg py-space-sm flex items-center justify-between">
-            <div className="flex items-center gap-space-xs">
-              <span className="material-symbols-outlined text-[20px] text-tertiary-fixed">verified</span>
-              <span className="font-body-md text-body-md font-bold">الخيار الأكثر اعتماداً للمحلات والمتاجر الجزائرية</span>
+          <div className="flex flex-wrap items-center justify-between gap-2 bg-primary-container px-5 py-3 text-white">
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-[20px] text-emerald-400">verified</span>
+              <span className="text-sm font-bold">الخيار الأكثر اعتماداً للمحلات والمتاجر الجزائرية</span>
             </div>
-            <span className="font-label-keycap text-label-keycap bg-surface-container-lowest/15 px-space-sm py-1 rounded">
+            <span className="rounded-lg bg-white/10 px-2.5 py-1 font-mono text-[11px]">
               نسخة شاملة {SITE.version}
             </span>
           </div>
 
           <div className="p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
             {/* Left details summary column */}
-            <div className="lg:col-span-7 flex flex-col justify-between">
+            <div className="order-2 flex flex-col justify-between lg:col-span-7">
               <div>
                 <div className="flex items-center gap-space-sm mb-space-xs">
                   <span className="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">
@@ -226,7 +226,7 @@ export default function Pricing() {
             </div>
 
             {/* Right Callout and Checkout Column */}
-            <div className="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+            <div className="order-1 flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg lg:col-span-5">
               <div>
                 <div className="flex items-center justify-between mb-space-sm">
                   <span className="font-label-keycap text-label-keycap px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface">
@@ -609,7 +609,7 @@ export default function Pricing() {
                     onChange={(e) => setDemoKey(e.target.value)}
                   />
                   <button
-                    className="w-full bg-primary text-on-primary hover:bg-primary/90 py-2 rounded-lg font-body-md text-body-md font-bold transition-all"
+                    className="w-full bg-secondary text-white hover:bg-blue-700 py-2 rounded-lg font-body-md text-body-md font-bold transition-all"
                     onClick={verifyDemoLicense}
                     type="button"
                   >
@@ -802,39 +802,47 @@ export default function Pricing() {
         </div>
       </div>
 
-      {/* 7. Bottom Interactive CTA Closing Dock */}
-      <div className="w-full bg-primary text-on-primary py-space-xl lg:py-20">
-        <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-space-xs bg-surface-container-lowest/10 px-space-md py-space-xs rounded-full mb-space-md">
-            <span className="material-symbols-outlined text-[18px] text-tertiary-fixed">lock_open</span>
-            <span className="font-label-keycap text-label-keycap text-on-primary">جاهزية تشغيلية كاملة وفورية</span>
-          </div>
-          <h2 className="font-headline-lg text-headline-lg lg:text-4xl font-bold mb-space-md max-w-3xl leading-tight">
-            ابدأ الآن تجربة الـ 7 أيام مجاناً، أو فعّل رخصتك الدائمة بـ 15,000 دج فقط
-          </h2>
-          <p className="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto mb-space-xl leading-relaxed">
-            انضم لأكثر من 1,200 تاجر ومتجر في 58 ولاية وثقوا بـ AN POS لتأمين مبيعاتهم وتنظيم حساباتهم بدقة وسرعة فائقة.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto">
-            <a
-              className="w-full sm:w-auto flex items-center justify-center gap-space-sm bg-tertiary-container text-on-tertiary-container hover:scale-105 transition-transform px-space-xl py-space-md rounded-xl font-body-lg text-body-lg font-bold shadow-lg"
-              href={WA_ACTIVATE}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <span className="material-symbols-outlined text-[24px]">chat</span>
-              <span>تواصل وتفعيل فوري عبر واتساب</span>
-            </a>
-            <Link
-              to="/downloads"
-              className="w-full sm:w-auto flex items-center justify-center gap-space-xs bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-on-primary px-space-xl py-space-md rounded-xl font-body-lg text-body-lg font-semibold transition-colors"
-            >
-              <span className="material-symbols-outlined text-[20px]">download</span>
-              <span>تحميل حزمة التثبيت (نسخة مجانية)</span>
-            </Link>
+      {/* 7. Closing CTA */}
+      <section className="bg-surface py-10 sm:py-14">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="relative overflow-hidden rounded-3xl bg-primary-container px-6 py-10 text-white sm:px-10">
+            <div
+              className="pointer-events-none absolute -top-20 end-0 h-56 w-56 rounded-full bg-blue-500/20 blur-3xl"
+              aria-hidden="true"
+            />
+            <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-2xl">
+                <span className="text-[11px] font-bold text-emerald-400">جاهزية تشغيلية كاملة وفورية</span>
+                <h2 className="mt-2 text-xl font-extrabold leading-8 sm:text-2xl">
+                  ابدأ تجربة الـ {SITE.trialDays} أيام مجاناً، أو فعّل رخصتك الدائمة بـ {SITE.price} فقط
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-slate-300">
+                  انضم لأكثر من 1,200 تاجر ومتجر في 58 ولاية وثقوا بـ AN POS لتأمين مبيعاتهم وتنظيم حساباتهم بدقة وسرعة.
+                </p>
+              </div>
+              <div className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto">
+                <Link
+                  to="/downloads"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-900 transition-colors hover:bg-slate-100"
+                >
+                  <Download className="h-4 w-4" aria-hidden="true" />
+                  تحميل مجاني
+                </Link>
+                <a
+                  href={WA_ACTIVATE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-emerald-400 px-5 py-3 text-sm font-bold text-emerald-950 transition-colors hover:bg-emerald-300"
+                >
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  تفعيل فوري عبر واتساب
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
     </div>
   )
 }

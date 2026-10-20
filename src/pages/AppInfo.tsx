@@ -16,7 +16,6 @@ import {
   Printer,
   Barcode,
 } from 'lucide-react'
-import Icon from '../components/ui/Icon'
 import {
   DESKTOP_VERSION,
   DESKTOP_FILE_SIZE,
@@ -31,7 +30,6 @@ import {
   DOWNLOAD_PORTABLE_URL,
   DOWNLOAD_ANDROID_APK_URL,
   DOWNLOAD_GOOGLE_PLAY_URL,
-  MAIN_DISTRIBUTION_CENTER,
   REGION_COVERAGE,
   PRICE_DZD,
   TRIAL_DAYS,
@@ -177,29 +175,14 @@ export default function AppInfo() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-surface">
       {/* 1. Header Banner & Context */}
-      <div className="w-full bg-surface-container-high py-space-sm px-4 sm:px-6 lg:px-12 border-b border-outline-variant/30">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm text-xs sm:text-sm">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse" />
-            <span className="font-bold text-on-surface">
-              مركز البيانات البرمجية المباشرة • Route: <code className="text-secondary bg-surface-container px-1.5 py-0.5 rounded font-mono">/app</code>
-            </span>
-          </div>
-          <div className="flex items-center gap-space-sm text-on-surface-variant font-medium">
-            <Icon name="location_on" size={16} className="text-secondary" />
-            <span>{MAIN_DISTRIBUTION_CENTER} • تغطية 58 ولاية</span>
-          </div>
-        </div>
-      </div>
-
       {/* 2. Hero Section */}
-      <section className="relative w-full py-12 lg:py-16 px-4 sm:px-6 lg:px-12 overflow-hidden bg-gradient-to-b from-surface-container-low/60 via-surface to-surface">
-        <div className="max-w-7xl mx-auto flex flex-col items-start gap-space-md">
+      <section className="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low/60 via-surface to-surface px-4 pb-8 pt-10 sm:px-6 lg:px-12 lg:pb-10 lg:pt-14">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 text-center">
           {/* Tag / Badge */}
           <div className="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container border border-outline-variant/40 shadow-sm">
             <Package className="w-4 h-4 text-secondary" />
             <span className="font-bold text-xs sm:text-sm text-on-surface">
-              📦 معلومات وإصدارات برنامج AN POS
+              معلومات وإصدارات برنامج AN POS
             </span>
             <span className="bg-secondary/20 text-secondary text-[11px] font-bold px-2 py-0.5 rounded-full">
               {DESKTOP_VERSION}
@@ -207,34 +190,34 @@ export default function AppInfo() {
           </div>
 
           {/* Main Title */}
-          <h1 className="font-bold text-2xl sm:text-4xl lg:text-5xl text-on-surface tracking-tight leading-snug">
+          <h1 className="max-w-4xl text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
             دليل الإصدارات الفنية، روابط التحميل <br className="hidden sm:inline" />
-            <span className="text-secondary">وإعدادات النظام المركزية</span>
+            <span className="gradient-text">وإعدادات النظام المركزية</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base lg:text-lg text-on-surface-variant max-w-3xl leading-relaxed">
+          <p className="mx-auto max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
             هذه الصفحة هي المرجع التقني الشامل لمسؤولي النظام والمطور والمستخدمين للاطلاع على كافة النسخ المتاحة (التثبيت، المحمولة، وتطبيق أندرويد)، أرقام الإصدارات، أحجام الملفات، وروابط التحميل المباشرة.
           </p>
 
           {/* Live Quick Spec Pills */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-4xl pt-2">
-            <div className="p-3 sm:p-4 rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col">
+          <div className="mt-3 grid w-full max-w-4xl grid-cols-2 gap-3 text-start sm:grid-cols-4">
+            <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-4">
               <span className="text-[11px] text-on-surface-variant font-medium">إصدار الحاسوب الحالي</span>
               <span className="text-base sm:text-lg font-bold text-on-surface mt-0.5 font-mono">{DESKTOP_VERSION}</span>
               <span className="text-[10px] text-secondary mt-0.5">Windows Installer & Portable</span>
             </div>
-            <div className="p-3 sm:p-4 rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col">
+            <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-4">
               <span className="text-[11px] text-on-surface-variant font-medium">حجم ملف الحاسوب</span>
-              <span className="text-base sm:text-lg font-bold text-secondary mt-0.5 font-mono">{DESKTOP_FILE_SIZE}</span>
+              <span className="mt-0.5 font-mono text-base font-bold text-slate-900 sm:text-lg">{DESKTOP_FILE_SIZE}</span>
               <span className="text-[10px] text-on-surface-variant mt-0.5">MediaFire Direct</span>
             </div>
-            <div className="p-3 sm:p-4 rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col">
+            <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-4">
               <span className="text-[11px] text-on-surface-variant font-medium">إصدار تطبيق الهاتف</span>
               <span className="text-base sm:text-lg font-bold text-on-surface mt-0.5 font-mono">{MOBILE_VERSION}</span>
               <span className="text-[10px] text-primary mt-0.5">Android APK ({MOBILE_FILE_SIZE})</span>
             </div>
-            <div className="p-3 sm:p-4 rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col">
+            <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-4">
               <span className="text-[11px] text-on-surface-variant font-medium">التجربة والترخيص</span>
               <span className="text-base sm:text-lg font-bold text-on-surface mt-0.5">{TRIAL_DAYS} أيام مجانية</span>
               <span className="text-[10px] text-on-surface-variant mt-0.5">تفعيل دائم: {PRICE_DZD}</span>
@@ -246,8 +229,8 @@ export default function AppInfo() {
 
 
       {/* 4. Detailed Builds & Releases Cards */}
-      <section className="w-full px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto flex flex-col gap-8">
+      <section className="w-full px-4 sm:px-6 lg:px-12 py-10 lg:py-14">
+        <div className="max-w-6xl mx-auto flex flex-col gap-8">
           {/* Section Header & Filter Tabs */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-outline-variant/30 pb-4">
             <div>
@@ -311,7 +294,7 @@ export default function AppInfo() {
               return (
                 <div
                   key={build.id}
-                  className="flex flex-col rounded-2xl bg-surface-container border border-outline-variant/40 hover:border-secondary/50 transition-all p-6 shadow-sm justify-between gap-6 relative group"
+                  className="relative flex flex-col justify-between gap-6 rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-blue-300 hover:shadow-[0_12px_30px_-18px_rgba(15,23,42,0.3)]"
                 >
                   {/* Top metadata */}
                   <div className="flex flex-col gap-4">
@@ -423,7 +406,7 @@ export default function AppInfo() {
 
       {/* 5. Full Technical Specifications Table */}
       <section className="w-full px-4 sm:px-6 lg:px-12 py-12 bg-surface-container-lowest border-y border-outline-variant/30">
-        <div className="max-w-7xl mx-auto flex flex-col gap-6">
+        <div className="max-w-6xl mx-auto flex flex-col gap-6">
           <div>
             <span className="text-xs font-bold text-secondary uppercase tracking-wider">مصفوفة المقارنة الفنية</span>
             <h2 className="text-xl sm:text-3xl font-bold text-on-surface mt-1">
@@ -486,7 +469,7 @@ export default function AppInfo() {
 
       {/* 6. System Requirements & Hardware Support */}
       <section className="w-full px-4 sm:px-6 lg:px-12 py-12">
-        <div className="max-w-7xl mx-auto flex flex-col gap-6">
+        <div className="max-w-6xl mx-auto flex flex-col gap-6">
           <div>
             <span className="text-xs font-bold text-secondary uppercase tracking-wider">متطلبات التشغيل والتوافق</span>
             <h2 className="text-xl sm:text-3xl font-bold text-on-surface mt-1">
@@ -548,7 +531,7 @@ export default function AppInfo() {
 
       {/* 7. Changelog & Version History */}
       <section className="w-full px-4 sm:px-6 lg:px-12 py-12 bg-surface-container-lowest border-t border-outline-variant/30">
-        <div className="max-w-7xl mx-auto flex flex-col gap-6">
+        <div className="max-w-6xl mx-auto flex flex-col gap-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <span className="text-xs font-bold text-secondary uppercase tracking-wider">سجل التحديثات البرمجية</span>
@@ -596,7 +579,7 @@ export default function AppInfo() {
 
       {/* 8. Help & Direct Support Footer Callout */}
       <section className="w-full px-4 sm:px-6 lg:px-12 py-12 bg-surface">
-        <div className="max-w-7xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-surface-container-high to-surface-container border border-outline-variant/40 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-6xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-surface-container-high to-surface-container border border-outline-variant/40 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col gap-2 text-center md:text-right">
             <h3 className="text-lg sm:text-2xl font-bold text-on-surface">
               هل تحتاج مساعدة في التثبيت أو التفعيل؟

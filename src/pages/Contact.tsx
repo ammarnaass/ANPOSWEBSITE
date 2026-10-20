@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { MessageCircle, Phone } from 'lucide-react'
 import Icon from '../components/ui/Icon'
+import PageHero from '../components/PageHero'
 import { SITE, WA_NUMBER_1 } from '../lib/site'
 
 export default function Contact() {
@@ -42,69 +44,41 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* Top Hero Header Section */}
-      <section className="relative w-full overflow-hidden bg-surface py-16 lg:py-24">
-        <div className="absolute inset-0 pointer-events-none opacity-40">
-          <div className="absolute -top-24 end-12 w-96 h-96 rounded-full bg-secondary-fixed filter blur-3xl"></div>
-          <div className="absolute top-1/2 start-8 w-80 h-80 rounded-full bg-surface-container-highest filter blur-2xl"></div>
-        </div>
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
-          {/* Badge Pill */}
-          <div className="inline-flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface shadow-sm mb-6">
-            <span className="w-2.5 h-2.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
-            <span className="font-label-sm text-label-sm font-semibold tracking-wide">فريق تطوير محلي جزائري • شريكك التقني الموثوق</span>
-          </div>
-          {/* Main Headline */}
-          <h1 className="font-headline-lg text-headline-lg lg:text-[44px] lg:leading-[54px] font-bold text-on-surface max-w-4xl tracking-tight mb-6">
-            نحن هنا لمساعدتك في بناء وتطوير <span className="text-secondary">تجارة مستقرة وناجحة</span>
-          </h1>
-          {/* Subtitle */}
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed mb-10">
-            فريق AN POS يجمع بين خبرة البرمجة المتقدمة والفهم العميق للتحديات اليومية لأصحاب المحلات والمتاجر في الجزائر. نسعى لتقديم حلول كاشير ومخزون عملية، سريعة، وبأفضل قيمة استثمارية مستدامة.
-          </p>
-          {/* Quick Action Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-space-md">
-            <a
-              className="inline-flex items-center gap-space-sm px-space-xl py-3 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-md hover:bg-primary-container transition-all active:translate-y-0.5"
-              href="#inquiry-form"
-            >
-              <Icon name="send" size={20} />
-              <span>راسلنا الآن مباشرة</span>
-            </a>
-            <a
-              className="inline-flex items-center gap-space-sm px-space-xl py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-lg text-body-lg shadow-sm hover:bg-surface-container-low transition-all active:translate-y-0.5"
-              href={`https://wa.me/${WA_NUMBER_1}`}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Icon name="chat" size={20} className="text-on-tertiary-container" />
-              <span>محادثة واتساب سريعة</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="فريق تطوير جزائري • شريكك التقني"
+        title={
+          <>
+            نساعدك في بناء <span className="gradient-text">تجارة مستقرة وناجحة</span>
+          </>
+        }
+        description="نجمع بين خبرة البرمجة والفهم العميق للتحديات اليومية لأصحاب المحلات في الجزائر — حلول كاشير ومخزون عملية وسريعة."
+        actions={[
+          { label: 'راسلنا الآن', href: '#inquiry-form', icon: MessageCircle, variant: 'primary' },
+          { label: 'محادثة واتساب', href: `https://wa.me/${WA_NUMBER_1}`, icon: Phone, variant: 'ghost' },
+        ]}
+      />
 
       {/* Statistics & Trust Metrics Ribbon */}
       <section className="w-full bg-surface-container-low py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-space-md lg:gap-space-lg">
             <div className="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span className="font-display-total text-display-total text-secondary mb-1 tracking-tight">+1,200</span>
+              <span className="mb-1 font-mono text-2xl font-extrabold text-slate-900 sm:text-3xl">+1,200</span>
               <span className="font-title-lg text-title-lg text-on-surface font-semibold mb-1">متجر ونشاط معتمد</span>
               <span className="font-label-sm text-label-sm text-on-surface-variant">يعتمدون يومياً على منظومة AN POS</span>
             </div>
             <div className="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span className="font-display-total text-display-total text-on-surface mb-1 tracking-tight">58</span>
+              <span className="mb-1 font-mono text-2xl font-extrabold text-slate-900 sm:text-3xl">58</span>
               <span className="font-title-lg text-title-lg text-on-surface font-semibold mb-1">ولاية مغطاة بالكامل</span>
               <span className="font-label-sm text-label-sm text-on-surface-variant">دعم تقني وتوصيل العتاد لجميع ربوع الوطن</span>
             </div>
             <div className="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span className="font-display-total text-display-total text-on-tertiary-container mb-1 tracking-tight">99.8%</span>
+              <span className="mb-1 font-mono text-2xl font-extrabold text-slate-900 sm:text-3xl">99.8%</span>
               <span className="font-title-lg text-title-lg text-on-surface font-semibold mb-1">معدل الاستقرار والرضا</span>
               <span className="font-label-sm text-label-sm text-on-surface-variant">دون أعطال أثناء ذروة ساعات الدفع والبيع</span>
             </div>
             <div className="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span className="font-display-total text-display-total text-secondary-container mb-1 tracking-tight">&lt; 10 دقائق</span>
+              <span className="mb-1 font-mono text-2xl font-extrabold text-slate-900 sm:text-3xl">&lt; 10 دقائق</span>
               <span className="font-title-lg text-title-lg text-on-surface font-semibold mb-1">سرعة الاستجابة والدعم</span>
               <span className="font-label-sm text-label-sm text-on-surface-variant">فريق جاهز للمساعدة الفورية والتفعيل</span>
             </div>
@@ -114,7 +88,7 @@ export default function Contact() {
 
       {/* About Us & Core Story Bento Grid */}
       <section className="w-full py-20 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-xl">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col gap-space-xl">
           {/* Section Tag */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
             <div className="flex flex-col gap-space-xs">
@@ -131,7 +105,7 @@ export default function Contact() {
             {/* Story Card */}
             <div className="lg:col-span-7 flex flex-col gap-space-lg p-8 rounded-2xl bg-surface-container-low shadow-sm">
               <div className="flex items-center gap-space-sm">
-                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-white shadow-sm">
                   <Icon name="terminal" size={24} />
                 </div>
                 <div>
@@ -243,7 +217,7 @@ export default function Contact() {
 
       {/* Direct Contact Channels Section */}
       <section className="w-full bg-surface-container-low py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-xl">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col gap-space-xl">
           <div className="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
             <span className="font-label-keycap text-label-keycap text-secondary uppercase tracking-widest">قنوات الاتصال المباشرة</span>
             <h2 className="font-headline-lg text-headline-lg text-on-surface font-bold">نحن دوماً على بُعد رسالة أو مكالمة واحدة</h2>
@@ -276,7 +250,7 @@ export default function Contact() {
               </div>
               <div className="mt-4 flex flex-col gap-2">
                 <a
-                  className="w-full inline-flex items-center justify-between px-3 py-2 rounded-xl bg-primary text-on-primary font-body-md text-body-md hover:bg-primary-container transition-all"
+                  className="w-full inline-flex items-center justify-between px-3 py-2 rounded-xl bg-secondary text-white font-body-md text-body-md hover:bg-blue-700 transition-all"
                   href={SITE.wa1}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -396,7 +370,7 @@ export default function Contact() {
 
       {/* Interactive Contact Form & Location Section */}
       <section className="w-full py-20 bg-surface" id="inquiry-form">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
             {/* Form Column (7 cols) */}
             <div className="lg:col-span-7 flex flex-col gap-space-md p-8 lg:p-10 rounded-2xl bg-surface-container-low shadow-sm">
@@ -510,7 +484,7 @@ export default function Contact() {
                 </div>
 
                 <button
-                  className="w-full py-3.5 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg font-bold shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-space-sm active:translate-y-0.5 mt-2"
+                  className="w-full py-3.5 rounded-xl bg-secondary text-white font-body-lg text-body-lg font-bold shadow-md hover:bg-blue-700 transition-all flex items-center justify-center gap-space-sm active:translate-y-0.5 mt-2"
                   type="submit"
                 >
                   <Icon name="mark_email_read" size={20} />
@@ -606,7 +580,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <Link
-                  className="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-all"
+                  className="px-space-md py-2 rounded-xl bg-secondary text-white font-label-sm text-label-sm font-semibold hover:bg-blue-700 transition-all"
                   to="/support"
                 >
                   صفحة الأسئلة
@@ -619,7 +593,7 @@ export default function Contact() {
 
       {/* Partner & Reseller Call to Action Banner */}
       <section className="w-full py-16 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="relative overflow-hidden rounded-2xl bg-primary-container text-on-primary p-8 lg:p-14 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-xl">
             <div className="flex flex-col gap-space-sm max-w-2xl text-start z-10">
               <div className="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-keycap text-label-keycap max-w-fit">
@@ -666,7 +640,7 @@ export default function Contact() {
 
       {/* Quick Inter-Page Navigation Ribbon */}
       <section className="w-full py-12 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container-low shadow-sm">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container-low shadow-sm">
           <div className="flex items-center gap-space-md">
             <div className="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
               <Icon name="download" size={24} />
@@ -678,7 +652,7 @@ export default function Contact() {
           </div>
           <div className="flex items-center gap-space-sm">
             <Link
-              className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-xl bg-primary text-on-primary font-body-lg text-body-lg shadow-sm hover:bg-primary-container transition-all"
+              className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-xl bg-secondary text-white font-body-lg text-body-lg shadow-sm hover:bg-blue-700 transition-all"
               to="/downloads"
             >
               <span>تحميل النسخة التجريبية</span>

@@ -68,74 +68,67 @@ export default function Home() {
          ======================================================== */}
       <section className="relative pt-6 sm:pt-12 pb-20 px-4 sm:px-6 lg:px-12 bg-gradient-to-b from-slate-50 via-white to-slate-50/50">
         {/* Ambient Radial Lights */}
-        <div className="absolute top-0 start-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-100/60 to-transparent blur-3xl pointer-events-none" />
+        <div className="absolute top-0 start-1/2 -translate-x-1/2 w-full max-w-6xl h-96 bg-gradient-to-b from-blue-100/60 to-transparent blur-3xl pointer-events-none" />
         <div className="absolute top-20 start-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-40 end-10 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           {/* Top Pill Announcement */}
           <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel shadow-sm border border-blue-200/60 text-xs sm:text-sm font-semibold text-slate-800 hover:border-blue-400 transition-colors">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur sm:text-sm">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              <span>الجيل الجديد لنقاط البيع في الجزائر • إصدار 2025/2026 المعتمد</span>
-              <span className="bg-blue-600 text-white font-mono text-[10px] px-2 py-0.5 rounded-full font-bold">
-                DZ-POS
-              </span>
+              <span>الإصدار 2025/2026 المعتمد لنقاط البيع في الجزائر</span>
             </div>
           </div>
 
           {/* Main Title & Subtitle */}
-          <div className="text-center max-w-4xl mx-auto mb-10">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 mb-6 leading-[1.2] sm:leading-[1.15]">
+          <div className="mx-auto mb-10 max-w-4xl text-center">
+            <h1 className="mb-5 text-3xl font-extrabold leading-[1.2] tracking-tight text-slate-950 sm:text-5xl lg:text-[56px]">
               نظّم مبيعات متجرك ومخزونك <br />
               <span className="gradient-text">بأسرع وأدق نظام نقاط بيع</span>
             </h1>
-            <p className="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal">
-              منظومة كاشير ومحاسبة شاملة تجمع بين <strong>الحاسوب المكتبي</strong> و<strong>تطبيق الهاتف</strong>. صُممت خصيصاً للمحلات والمتاجر الجزائرية: سرعة خارقة بالباركود، توافق شامل مع الطابعات الحرارية، وعمل كامل <strong>بدون إنترنت (100% Offline)</strong>.
+            <p className="mx-auto max-w-2xl text-sm leading-7 text-slate-600 sm:text-lg sm:leading-8">
+              كاشير ومحاسبة شاملة للحاسوب والهاتف: بيع سريع بالباركود، جرد دقيق، وتوافق كامل مع الطابعات الحرارية — مع عمل مستمر <strong className="text-slate-800">بدون إنترنت</strong>.
             </p>
 
             {/* Hero CTAs */}
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto">
+            <div className="mx-auto mt-8 flex max-w-md flex-col items-center justify-center gap-2.5 sm:flex-row">
               <Link
                 to="/downloads"
-                className="btn-shimmer w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-secondary hover:bg-blue-700 text-white font-bold text-base sm:text-lg transition-all shadow-[0_4px_20px_rgba(37,99,235,0.35)] hover:shadow-[0_6px_25px_rgba(37,99,235,0.45)] active:translate-y-0.5 flex items-center justify-center gap-2 group"
+                className="btn-shimmer group flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-secondary px-6 py-3 text-sm font-bold text-white shadow-[0_4px_18px_rgba(37,99,235,0.3)] transition-all hover:bg-blue-700 active:translate-y-px sm:w-auto sm:text-base"
               >
-                <span className="material-symbols-outlined text-[24px]">download</span>
+                <span className="material-symbols-outlined text-[20px]">download</span>
                 <span>حمّل وجرّبه 7 أيام مجاناً</span>
-                <span className="hidden sm:inline-block font-mono text-xs bg-white/20 px-2 py-0.5 rounded font-bold">
-                  F12
-                </span>
               </Link>
 
               <a
                 href={WA_ACTIVATE}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-2xl glass-panel hover:bg-slate-100 text-slate-800 font-bold text-base transition-colors flex items-center justify-center gap-2 border border-slate-200"
+                className="flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-800 transition-colors hover:bg-slate-50 sm:w-auto sm:text-base"
               >
                 <span className="material-symbols-outlined text-[20px] text-emerald-600">chat</span>
-                <span>تفعيل فوري عبر واتساب</span>
+                <span>تفعيل عبر واتساب</span>
               </a>
             </div>
 
-            {/* Quick Metrics Bar */}
-            <div className="mt-10 grid grid-cols-3 gap-3 max-w-xl mx-auto pt-6 border-t border-slate-200/80">
-              <div className="text-center p-2 rounded-xl bg-slate-50/80 border border-slate-200/50">
-                <div className="text-lg sm:text-2xl font-black text-slate-900 font-mono">0.1 ثا</div>
-                <div className="text-[11px] sm:text-xs text-slate-500 font-medium">سرعة قراءة وطباعة الباركود</div>
-              </div>
-              <div className="text-center p-2 rounded-xl bg-blue-50/60 border border-blue-100">
-                <div className="text-lg sm:text-2xl font-black text-blue-600 font-mono">100% أوفلاين</div>
-                <div className="text-[11px] sm:text-xs text-slate-500 font-medium">عمل مستمر بدون انقطاع</div>
-              </div>
-              <div className="text-center p-2 rounded-xl bg-emerald-50/60 border border-emerald-100">
-                <div className="text-lg sm:text-2xl font-black text-emerald-600 font-mono">58 ولاية</div>
-                <div className="text-[11px] sm:text-xs text-slate-500 font-medium">دعم فني وتوزيع معتمد</div>
-              </div>
-            </div>
+            {/* Quick Metrics */}
+            <dl className="mx-auto mt-9 grid max-w-lg grid-cols-3 divide-x divide-x-reverse divide-slate-200 border-t border-slate-200/80 pt-6">
+              {[
+                { value: '0.1 ثا', label: 'سرعة قراءة الباركود' },
+                { value: '100%', label: 'عمل بدون إنترنت' },
+                { value: '58', label: 'ولاية مغطاة' },
+              ].map((stat) => (
+                <div key={stat.label} className="px-2 text-center">
+                  <dt className="sr-only">{stat.label}</dt>
+                  <dd className="font-mono text-lg font-black text-slate-900 sm:text-2xl">{stat.value}</dd>
+                  <dd className="mt-0.5 text-[11px] font-medium text-slate-500 sm:text-xs">{stat.label}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
           {/* ========================================================
@@ -145,7 +138,7 @@ export default function Home() {
             {/* Floating SaaS Highlights */}
             <div className="hidden lg:flex items-center gap-2 absolute -top-5 -start-6 z-30 px-3.5 py-2 rounded-xl glass-panel shadow-lg border border-slate-200 text-xs font-bold text-slate-800 animate-float">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-              <span>طابعة إيصالات 80mm متصلة بنجاح ✓</span>
+              <span>طابعة إيصالات 80mm متصلة</span>
             </div>
 
             <div className="hidden lg:flex items-center gap-2 absolute -bottom-5 -end-6 z-30 px-3.5 py-2 rounded-xl glass-panel shadow-lg border border-slate-200 text-xs font-bold text-slate-800 animate-float-delayed">
@@ -225,7 +218,7 @@ export default function Home() {
                         <div className="mb-2">
                           <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
                             <span>أصناف سريعة (انقر للإضافة الفورية إلى الفاتورة):</span>
-                            <span className="text-[11px] text-blue-400">انقر لتجربة السرعة ⚡</span>
+                            <span className="text-[11px] text-blue-400">انقر لتجربة السرعة</span>
                           </div>
                           <div className="grid grid-cols-2 sm:grid-cols-2 gap-2">
                             {QUICK_PRODUCTS.map((prod) => (
@@ -337,7 +330,7 @@ export default function Home() {
                         {/* Thermal Print Alert if Triggered */}
                         {printed && (
                           <div className="mb-2 p-2 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold text-center animate-in fade-in">
-                            ✓ تمت طباعة الوصل الحراري وحفظ الفاتورة بنجاح!
+                            تمت طباعة الوصل الحراري وحفظ الفاتورة بنجاح
                           </div>
                         )}
 
@@ -474,7 +467,7 @@ export default function Home() {
           2. BUSINESS CATEGORIES & TRUST MARQUEE
          ======================================================== */}
       <section className="py-12 bg-white border-y border-slate-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <p className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider mb-6">
             حل برمجي معتمد ومخصص لمختلف القطاعات والأنشطة التجارية في الجزائر
           </p>
@@ -505,7 +498,7 @@ export default function Home() {
           3. BENTO GRID FEATURES (Modern SaaS Feature Section)
          ======================================================== */}
       <section className="py-20 px-4 sm:px-6 lg:px-12 bg-slate-50/60" id="features">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-3">
@@ -647,7 +640,7 @@ export default function Home() {
           4. HARDWARE ECOSYSTEM SHOWCASE (Modern Tech Compatibility)
          ======================================================== */}
       <section className="py-20 px-4 sm:px-6 lg:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
               توافق عتاد شامل 100%
