@@ -173,7 +173,7 @@ export default function Support() {
               <button
                 key={tag}
                 type="button"
-                className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-medium text-slate-600 transition-colors hover:border-blue-200 hover:text-secondary"
+                className="inline-flex min-h-10 items-center rounded-full border border-slate-200 bg-white px-3 py-2 text-[11px] font-medium text-slate-600 transition-colors hover:border-blue-200 hover:text-secondary"
                 onClick={() => {
                   setSearchQuery(tag)
                   const el = document.getElementById('faqList')
@@ -578,7 +578,7 @@ export default function Support() {
                   onClick={() => setOpenFaq(isOpen ? null : faq.id)}
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-3">
+                    <div className="flex min-w-0 items-center gap-3">
                       <Icon name={faq.icon} size={22} className="text-secondary" />
                       <h3 className="font-title-lg text-title-lg text-on-surface font-semibold">{faq.question}</h3>
                     </div>
@@ -611,7 +611,7 @@ export default function Support() {
               </div>
               <a
                 href={`mailto:${SITE.email}?subject=${encodeURIComponent('تذكرة مساعدة داخلية - برنامج AN POS')}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors"
+                className="inline-flex min-h-10 items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors hover:bg-surface-container-high"
                 dir="ltr"
               >
                 <Icon name="mail" size={16} />

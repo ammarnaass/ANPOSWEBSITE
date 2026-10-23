@@ -322,13 +322,13 @@ export default function AppInfo() {
                     <div className="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2 min-w-0">
                         <span className="material-symbols-outlined text-secondary text-[18px] shrink-0">draft</span>
-                        <span className="text-xs font-mono text-on-surface truncate" title={build.filename}>
+                        <span className="break-all font-mono text-[11px] leading-5 text-on-surface" title={build.filename}>
                           {build.filename}
                         </span>
                       </div>
                       <button
                         onClick={() => copyToClipboard(build.filename, `file-${build.id}`)}
-                        className="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors shrink-0"
+                        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
                         title="نسخ اسم الملف"
                       >
                         {copiedKey === `file-${build.id}` ? (
@@ -369,7 +369,7 @@ export default function AppInfo() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => copyToClipboard(build.url, `url-${build.id}`)}
-                        className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface text-xs font-medium transition-colors border border-outline-variant/30"
+                        className="flex min-h-11 flex-1 items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-outline-variant/30 bg-surface-container-lowest text-xs font-medium text-on-surface transition-colors hover:bg-surface-container-high"
                       >
                         {copiedKey === `url-${build.id}` ? (
                           <>
@@ -389,7 +389,7 @@ export default function AppInfo() {
                           href={build.secondaryUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-1 py-2 px-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface text-xs font-medium transition-colors border border-outline-variant/30"
+                          className="inline-flex min-h-11 items-center justify-center gap-1 px-3 py-2 rounded-xl border border-outline-variant/30 bg-surface-container-lowest text-xs font-medium text-on-surface transition-colors hover:bg-surface-container-high"
                         >
                           <span>{build.secondaryLabel}</span>
                           <ExternalLink className="w-3 h-3" />

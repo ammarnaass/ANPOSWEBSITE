@@ -630,7 +630,7 @@ export default function Pricing() {
                 <span className="font-body-md text-body-md text-on-surface font-semibold">هل واجهت أي صعوبة؟</span>
               </div>
               <a
-                className="font-label-sm text-label-sm text-secondary hover:underline font-bold"
+                className="inline-flex min-h-10 items-center px-1 font-label-sm text-label-sm font-bold text-secondary hover:underline"
                 href={WA_ACTIVATE}
                 rel="noopener noreferrer"
                 target="_blank"

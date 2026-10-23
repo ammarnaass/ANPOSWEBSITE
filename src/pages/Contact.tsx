@@ -78,7 +78,7 @@ export default function Contact() {
               <span className="font-label-sm text-label-sm text-on-surface-variant">دون أعطال أثناء ذروة ساعات الدفع والبيع</span>
             </div>
             <div className="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center">
-              <span className="mb-1 font-mono text-2xl font-extrabold text-slate-900 sm:text-3xl">&lt; 10 دقائق</span>
+              <span className="mb-1 font-mono text-2xl font-extrabold text-slate-900 sm:text-3xl">أقل من 10 دقائق</span>
               <span className="font-title-lg text-title-lg text-on-surface font-semibold mb-1">سرعة الاستجابة والدعم</span>
               <span className="font-label-sm text-label-sm text-on-surface-variant">فريق جاهز للمساعدة الفورية والتفعيل</span>
             </div>
@@ -530,7 +530,7 @@ export default function Contact() {
                     href={SITE.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"
+                    className="inline-flex min-h-10 items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"
                   >
                     <span>فيسبوك</span>
                   </a>
@@ -538,7 +538,7 @@ export default function Contact() {
                     href={SITE.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"
+                    className="inline-flex min-h-10 items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"
                   >
                     <span>إنستغرام ({SITE.social.instagramHandle})</span>
                   </a>
@@ -546,7 +546,7 @@ export default function Contact() {
                     href={SITE.social.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"
+                    className="inline-flex min-h-10 items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors"
                   >
                     <span>يوتيوب ({SITE.social.youtubeHandle})</span>
                   </a>

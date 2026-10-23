@@ -277,7 +277,7 @@ export default function Home() {
                             <span className="text-slate-400 font-mono">{cartCount} قطع</span>
                             <button
                               onClick={handleResetCart}
-                              className="text-[11px] text-rose-400 hover:underline cursor-pointer"
+                              className="inline-flex min-h-10 cursor-pointer items-center rounded-md px-3 text-[11px] text-rose-400 hover:bg-rose-500/10 hover:underline"
                               title="إفراغ الفاتورة"
                             >
                               مسح
@@ -723,7 +723,7 @@ export default function Home() {
               <button
                 key={tab.id}
                 onClick={() => setActiveScreenshotTab(tab.id)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                className={`inline-flex min-h-11 items-center px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   activeScreenshotTab === tab.id
                     ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30 scale-102'
                     : 'bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-800'

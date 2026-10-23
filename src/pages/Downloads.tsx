@@ -160,7 +160,7 @@ function PlatformCard({
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 py-1 text-xs font-semibold text-slate-600 transition-colors hover:text-secondary"
+              className="inline-flex min-h-10 items-center gap-1.5 px-1 text-xs font-semibold text-slate-600 transition-colors hover:text-secondary"
             >
               <link.icon className="h-3.5 w-3.5" aria-hidden="true" />
               {link.label}
@@ -525,7 +525,7 @@ export default function Downloads() {
               <div className="mt-5 border-t border-slate-200 pt-4">
                 <Link
                   to="/app"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 transition-colors hover:text-secondary"
+                  className="inline-flex min-h-10 items-center gap-1.5 text-xs font-semibold text-slate-600 transition-colors hover:text-secondary"
                 >
                   <MonitorSmartphone className="h-3.5 w-3.5" aria-hidden="true" />
                   تفاصيل الإصدار وسجل التغييرات

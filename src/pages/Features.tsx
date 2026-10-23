@@ -159,7 +159,7 @@ export default function Features() {
         meta={
           <div className="mx-auto grid max-w-2xl grid-cols-3 divide-x divide-x-reverse divide-slate-200 border-t border-slate-200/80 pt-5">
             {[
-              { value: '< 0.3 ثا', label: 'إضافة منتج للفاتورة' },
+              { value: '0.3 ثا', label: 'أقصى زمن لإضافة منتج' },
               { value: '100%', label: 'عمل بدون إنترنت' },
               { value: '0 دج', label: 'رسوم شهرية' },
             ].map((stat) => (

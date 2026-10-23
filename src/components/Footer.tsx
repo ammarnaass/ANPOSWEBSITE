@@ -63,7 +63,7 @@ export default function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="inline-flex items-center gap-1.5 text-slate-400 transition-colors hover:text-white"
+                    className="inline-flex min-h-10 items-center gap-1.5 py-1 text-slate-400 transition-colors hover:text-white"
                   >
                     <ArrowLeft className="h-3.5 w-3.5 text-blue-500" aria-hidden="true" />
                     {link.label}
@@ -73,7 +73,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/app"
-                  className="inline-flex items-center gap-2 pt-1 text-xs font-semibold text-blue-400 transition-colors hover:text-blue-300"
+                  className="inline-flex min-h-10 items-center gap-2 text-xs font-semibold text-blue-400 transition-colors hover:text-blue-300"
                 >
                   إصدارات التحديث
                   <span className="rounded border border-blue-500/30 bg-blue-500/10 px-1.5 py-0.5 font-mono text-[10px]">
@@ -113,11 +113,11 @@ export default function Footer() {
                 واتساب مباشر
               </div>
               <div className="mt-1.5 flex items-center gap-2 text-xs" dir="ltr">
-                <a href={SITE.wa1} target="_blank" rel="noopener noreferrer" className="font-mono font-bold text-emerald-300 hover:text-white">
+                <a href={SITE.wa1} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-10 items-center font-mono font-bold text-emerald-300 hover:text-white">
                   {SITE.phone1}
                 </a>
                 <span className="text-emerald-800">/</span>
-                <a href={SITE.wa2} target="_blank" rel="noopener noreferrer" className="font-mono font-bold text-emerald-300 hover:text-white">
+                <a href={SITE.wa2} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-10 items-center font-mono font-bold text-emerald-300 hover:text-white">
                   {SITE.phone2}
                 </a>
               </div>
@@ -133,7 +133,7 @@ export default function Footer() {
                 {SITE.location}
               </li>
               <li>
-                <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 hover:text-white" dir="ltr">
+                <a href={`mailto:${SITE.email}`} className="flex min-h-10 items-center gap-2 hover:text-white" dir="ltr">
                   <Mail className="h-3.5 w-3.5 shrink-0 text-blue-500" aria-hidden="true" />
                   {SITE.email}
                 </a>
@@ -151,7 +151,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1 text-[11px] text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
+                  className="inline-flex min-h-9 items-center rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-[11px] text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
                 >
                   {social.label}
                 </a>

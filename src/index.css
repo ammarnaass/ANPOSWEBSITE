@@ -647,3 +647,14 @@ header.scrolled {
   animation: pulse-ring 2.5s infinite;
 }
 
+
+/* أيقونات Material Symbols: تثبيت الأبعاد يمنع تمدّد التخطيط إذا تأخر تحميل الخط */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  overflow: hidden;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
