@@ -39,8 +39,8 @@ export const MOBILE_OS = 'Android 8.0+'
 export const MOBILE_APK_FILENAME = 'AN-POS-Mobile.apk'
 
 // روابط التحميل الرسمية لبرنامج AN POS (نسخ الحاسوب)
-export const DOWNLOAD_SETUP_URL = 'https://download853.mediafire.com/cvqqzvb0lmugO2GEtqRsvVSxLItczNTU6VaItlEjqsEgBSdpmfrBI5Kenz-1LwpThy8EeFVIBtF68dEp7USfiS4sdXIIUvy7yqdJ8_rHzfehebOgbNv0hmfdYEeWhaPiOQrSKCJ2Uof73nYI8inwHqip2mqwqTbyWIuXRAYRKYIliNo/jmov31ppei00cj1/AN+POS+Setup+2.5.0.exe'
-export const DOWNLOAD_PORTABLE_URL = 'https://www.mediafire.com/file/pg4sbitocfvlwm8/AN+POS+2.5.0.exe/file'
+export const DOWNLOAD_SETUP_URL = 'https://github.com/ammarnaass/AN-POS-TEST/releases/download/v3.0.0/AN.POS-Setup-3.0.0-x64.exe'
+export const DOWNLOAD_PORTABLE_URL = 'https://github.com/ammarnaass/AN-POS-TEST/releases/download/v3.0.0/AN.POS-3.0.0-x64-portable.exe'
 
 // روابط تحميل تطبيق الهاتف (Android APK & Google Play)
 export const DOWNLOAD_ANDROID_APK_URL = 'https://download.mediafire.com/anpos/AN-POS-Mobile.apk'
