@@ -124,9 +124,20 @@ export default function AppInfo() {
 
   const changelog = [
     {
-      version: 'v2.5.3 (الحالي)',
+      version: 'v3.0.1 (الحالي)',
+      date: 'نوفمبر 2026',
+      status: 'إصدار رئيسي مستقر - Major Production Release',
+      notes: [
+        'إطلاق الإصدار الرئيسي v3.0.1 مع ترقية شاملة لمحرك النظام وبنية معالجة البيانات.',
+        'تحسينات نوعية في سرعة استجابة نقطة البيع واستقرار مزامنة البيانات السحابية.',
+        'تحديث كامل لكافة واجهات المستخدم لتوفير تجربة استخدام أسرع وأكثر مرونة.',
+        'تعزيز دعم طابعات الإيصالات والباركود الحديثة وشاشات اللمس.',
+      ],
+    },
+    {
+      version: 'v2.5.3',
       date: 'سبتمبر 2026',
-      status: 'إصدار مستقر - Production Stable',
+      status: 'إصدار سابق مستقر',
       notes: [
         'تحديث شامل لمنظومة AN POS وإطلاق الإصدار v2.5.3 مع تحسينات موسعة في الأداء والاستقرار.',
         'اعتماد مركز الدعم والتوزيع الرئيسي في وادي سوف مع التغطية الشاملة لـ 58 ولاية جزائرية.',
@@ -540,7 +551,7 @@ export default function AppInfo() {
               </h2>
             </div>
             <span className="text-xs text-on-surface-variant bg-surface-container px-3 py-1.5 rounded-xl font-mono">
-              Current Branch: release/v2.5.3
+              Current Branch: release/v3.0.1
             </span>
           </div>
 

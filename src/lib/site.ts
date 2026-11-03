@@ -22,18 +22,18 @@ export const WA_GUIDE = msg('مرحباً، أريد دليل استخدام ا�
 // 📦 معلومات وإصدارات برنامج AN POS
 // يمكنك تعديل رقم الإصدار وحجم الملفات وأسماء البرامج من هنا مباشرة
 // ==========================================
-export const SOFTWARE_VERSION = 'v2.5.3' // الإصدار العام المعروض في الهيدر والبطاقات
+export const SOFTWARE_VERSION = 'v3.0.1' // الإصدار العام المعروض في الهيدر والبطاقات
 
 // نسخة سطح المكتب (Desktop POS - Windows)
-export const DESKTOP_VERSION = 'v2.5.3'
+export const DESKTOP_VERSION = 'v3.0.1'
 export const DESKTOP_FILE_SIZE = '146.41MB'
 export const DESKTOP_OS = 'Windows 10/11'
 export const DESKTOP_OS_FULL = 'Windows 11 / 10 / 8.1 (64-bit)'
-export const DESKTOP_SETUP_FILENAME = 'AN POS Setup 2.5.3.exe'
-export const DESKTOP_PORTABLE_FILENAME = 'AN POS 2.5.3.exe'
+export const DESKTOP_SETUP_FILENAME = 'AN-POS-Setup-3.0.1-x64.exe'
+export const DESKTOP_PORTABLE_FILENAME = 'AN-POS-3.0.1-x64-portable.exe'
 
 // تطبيق الهاتف المحمول (Mobile POS - Android)
-export const MOBILE_VERSION = 'v2.5.3'
+export const MOBILE_VERSION = 'v3.0.1'
 export const MOBILE_FILE_SIZE = '28 MB'
 export const MOBILE_OS = 'Android 8.0+'
 export const MOBILE_APK_FILENAME = 'AN-POS-Mobile.apk'
